@@ -34,6 +34,7 @@ env:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         include:
           - runner: ubuntu-latest
@@ -41,6 +42,7 @@ jobs:
           - runner: ubuntu-24.04-arm
             arch: arm64
     runs-on: ${{ matrix.runner }}
+    if: ${{ !(matrix.arch == 'arm64' && (inputs.distro || github.event.client_payload.distro) == 'jammy') }}
     container:
       image: ubuntu:${{ inputs.distro || github.event.client_payload.distro }}
     env:
@@ -123,6 +125,7 @@ jobs:
 
   publish:
     needs: build
+    if: ${{ !cancelled() && needs.build.result != 'failure' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
