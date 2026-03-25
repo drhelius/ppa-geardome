@@ -105,7 +105,7 @@ jobs:
 
       - name: Checkout emulator source
         if: steps.check.outputs.skip != 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: drhelius/${{ env.REPO_NAME }}
           ref: ${{ env.VERSION }}
@@ -137,7 +137,7 @@ jobs:
 
       - name: Upload .deb artifact
         if: steps.check.outputs.skip != 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}-${{ matrix.arch }}
           path: /tmp/debs/*.deb
@@ -155,13 +155,13 @@ jobs:
       DISTRO: ${{ inputs.distro || github.event.client_payload.distro }}
     steps:
       - name: Checkout gh-pages
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: gh-pages
           fetch-depth: 0
 
       - name: Download .deb artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}-*
           path: incoming/
@@ -200,8 +200,8 @@ jobs:
 
           # Sign Release (remove old signatures first)
           rm -f Release.gpg InRelease
-          gpg --batch --default-key "${GPG_KEY_ID}" -abs -o Release.gpg Release
-          gpg --batch --default-key "${GPG_KEY_ID}" --clearsign -o InRelease Release
+          gpg --batch --pinentry-mode loopback --default-key "${GPG_KEY_ID}" -abs -o Release.gpg Release
+          gpg --batch --pinentry-mode loopback --default-key "${GPG_KEY_ID}" --clearsign -o InRelease Release
           cd ../..
 
       - name: Export public key
