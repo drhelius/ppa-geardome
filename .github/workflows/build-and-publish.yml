@@ -33,7 +33,14 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - runner: ubuntu-latest
+            arch: amd64
+          - runner: ubuntu-24.04-arm
+            arch: arm64
+    runs-on: ${{ matrix.runner }}
     container:
       image: ubuntu:${{ inputs.distro || github.event.client_payload.distro }}
     env:
@@ -44,6 +51,7 @@ jobs:
           echo "EMU=${{ inputs.emulator || github.event.client_payload.emulator }}" >> $GITHUB_ENV
           echo "VERSION=${{ inputs.version || github.event.client_payload.version }}" >> $GITHUB_ENV
           echo "DISTRO=${{ inputs.distro || github.event.client_payload.distro }}" >> $GITHUB_ENV
+          echo "ARCH=${{ matrix.arch }}" >> $GITHUB_ENV
 
       - name: Map emulator to repo name
         run: |
@@ -105,7 +113,7 @@ jobs:
       - name: Upload .deb artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}
+          name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}-${{ matrix.arch }}
           path: ../*.deb
 
   publish:
@@ -125,11 +133,12 @@ jobs:
           ref: gh-pages
           fetch-depth: 0
 
-      - name: Download .deb artifact
+      - name: Download .deb artifacts
         uses: actions/download-artifact@v4
         with:
-          name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}
+          pattern: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}-*
           path: incoming/
+          merge-multiple: true
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
@@ -143,19 +152,20 @@ jobs:
 
       - name: Update APT repository
         run: |
-          ARCH=amd64
           POOL="pool/main/${EMU}"
-          DIST_DIR="dists/${DISTRO}/main/binary-${ARCH}"
 
           # Remove old .deb for this emulator (keep only latest)
           mkdir -p "${POOL}"
           rm -f "${POOL}"/${EMU}_*.deb
           cp incoming/*.deb "${POOL}/"
 
-          # Generate Packages index
-          mkdir -p "${DIST_DIR}"
-          dpkg-scanpackages --arch "${ARCH}" pool/ > "${DIST_DIR}/Packages"
-          gzip -k -f "${DIST_DIR}/Packages"
+          # Generate Packages index for each architecture
+          for ARCH in amd64 arm64; do
+            DIST_DIR="dists/${DISTRO}/main/binary-${ARCH}"
+            mkdir -p "${DIST_DIR}"
+            dpkg-scanpackages --arch "${ARCH}" pool/ > "${DIST_DIR}/Packages"
+            gzip -k -f "${DIST_DIR}/Packages"
+          done
 
           # Generate Release file
           cd "dists/${DISTRO}"

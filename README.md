@@ -20,7 +20,7 @@ First, add the GPG key and repository:
 curl -fsSL https://drhelius.github.io/ppa-geardome/geardome-ppa.gpg | \
   sudo tee /usr/share/keyrings/geardome-archive-keyring.gpg > /dev/null
 
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/geardome-archive-keyring.gpg] \
+echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/geardome-archive-keyring.gpg] \
   https://drhelius.github.io/ppa-geardome noble main" | \
   sudo tee /etc/apt/sources.list.d/geardome.list
 ```
