@@ -1,0 +1,184 @@
+name: Build and Publish PPA
+
+on:
+  workflow_dispatch:
+    inputs:
+      emulator:
+        description: 'Emulator to build'
+        required: true
+        type: choice
+        options:
+          - geargrafx
+          - gearboy
+          - gearsystem
+          - gearcoleco
+          - gearlynx
+      tag:
+        description: 'Git tag to checkout (e.g., 1.7.2 or gearboy-3.4.0)'
+        required: true
+      version:
+        description: 'Version number (e.g., 1.7.2)'
+        required: true
+      distro:
+        description: 'Ubuntu codename'
+        required: true
+        default: 'noble'
+        type: choice
+        options:
+          - noble
+          - jammy
+
+  repository_dispatch:
+    types: [build-package]
+
+env:
+  SDL3_TAG: release-3.2.14
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:${{ inputs.distro || github.event.client_payload.distro }}
+    env:
+      DEBIAN_FRONTEND: noninteractive
+    steps:
+      - name: Resolve inputs
+        run: |
+          echo "EMU=${{ inputs.emulator || github.event.client_payload.emulator }}" >> $GITHUB_ENV
+          echo "TAG=${{ inputs.tag || github.event.client_payload.tag }}" >> $GITHUB_ENV
+          echo "VERSION=${{ inputs.version || github.event.client_payload.version }}" >> $GITHUB_ENV
+          echo "DISTRO=${{ inputs.distro || github.event.client_payload.distro }}" >> $GITHUB_ENV
+
+      - name: Map emulator to repo name
+        run: |
+          case "$EMU" in
+            geargrafx)  REPO_NAME="Geargrafx" ;;
+            gearboy)    REPO_NAME="Gearboy" ;;
+            gearsystem) REPO_NAME="Gearsystem" ;;
+            gearcoleco) REPO_NAME="Gearcoleco" ;;
+            gearlynx)   REPO_NAME="Gearlynx" ;;
+            *) echo "Unknown emulator: $EMU" && exit 1 ;;
+          esac
+          echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
+
+      - name: Install build tools
+        run: |
+          apt-get update
+          apt-get install -y git curl ca-certificates cmake build-essential \
+            devscripts debhelper fakeroot lintian dpkg-dev gpg pkgconf \
+            libgl-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev \
+            libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev libwayland-dev \
+            libdecor-0-dev libdrm-dev libgbm-dev libgl1-mesa-dev \
+            libegl1-mesa-dev libdbus-1-dev libudev-dev
+
+      - name: Build and install SDL3
+        run: |
+          echo "Building SDL3 ${{ env.SDL3_TAG }}"
+          git clone --depth 1 --branch "${{ env.SDL3_TAG }}" https://github.com/libsdl-org/SDL.git /tmp/SDL3
+          cmake -S /tmp/SDL3 -B /tmp/SDL3/build \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DSDL_TESTS=OFF \
+            -DSDL_EXAMPLES=OFF
+          cmake --build /tmp/SDL3/build -j$(nproc)
+          cmake --install /tmp/SDL3/build
+          rm -rf /tmp/SDL3
+
+      - name: Checkout emulator source
+        uses: actions/checkout@v4
+        with:
+          repository: drhelius/${{ env.REPO_NAME }}
+          ref: ${{ env.TAG }}
+
+      - name: Prepare debian packaging
+        run: |
+          cp -r platforms/linux/debian .
+
+          cat > debian/changelog << CHLOG
+          ${{ env.EMU }} (${{ env.VERSION }}-1~ppa1~${{ env.DISTRO }}1) ${{ env.DISTRO }}; urgency=medium
+
+            * Release ${{ env.VERSION }}.
+
+           -- github-actions[bot] <github-actions[bot]@users.noreply.github.com>  $(date -R)
+          CHLOG
+
+          sed -i 's/^          //' debian/changelog
+
+      - name: Build .deb package
+        run: debuild -d -us -uc -b
+
+      - name: Upload .deb artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}
+          path: ../*.deb
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+    env:
+      EMU: ${{ inputs.emulator || github.event.client_payload.emulator }}
+      VERSION: ${{ inputs.version || github.event.client_payload.version }}
+      DISTRO: ${{ inputs.distro || github.event.client_payload.distro }}
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+
+      - name: Download .deb artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}
+          path: incoming/
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+
+      - name: Get GPG key ID
+        run: |
+          GPG_KEY_ID=$(gpg --list-secret-keys --keyid-format long | grep sec | head -1 | awk '{print $2}' | cut -d'/' -f2)
+          echo "GPG_KEY_ID=$GPG_KEY_ID" >> $GITHUB_ENV
+
+      - name: Update APT repository
+        run: |
+          ARCH=amd64
+          POOL="pool/main/${EMU}"
+          DIST_DIR="dists/${DISTRO}/main/binary-${ARCH}"
+
+          # Remove old .deb for this emulator (keep only latest)
+          mkdir -p "${POOL}"
+          rm -f "${POOL}"/${EMU}_*.deb
+          cp incoming/*.deb "${POOL}/"
+
+          # Generate Packages index
+          mkdir -p "${DIST_DIR}"
+          dpkg-scanpackages --arch "${ARCH}" pool/ > "${DIST_DIR}/Packages"
+          gzip -k -f "${DIST_DIR}/Packages"
+
+          # Generate Release file
+          cd "dists/${DISTRO}"
+          apt-ftparchive release . > Release
+
+          # Sign Release
+          gpg --default-key "${GPG_KEY_ID}" -abs -o Release.gpg Release
+          gpg --default-key "${GPG_KEY_ID}" --clearsign -o InRelease Release
+          cd ../..
+
+      - name: Export public key
+        run: |
+          gpg --armor --export "${GPG_KEY_ID}" > geardome-ppa.asc
+          gpg --export "${GPG_KEY_ID}" > geardome-ppa.gpg
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update ${EMU} ${VERSION} for ${DISTRO}"
+          git push
