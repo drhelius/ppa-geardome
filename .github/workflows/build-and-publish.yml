@@ -161,9 +161,10 @@ jobs:
           cd "dists/${DISTRO}"
           apt-ftparchive release . > Release
 
-          # Sign Release
-          gpg --default-key "${GPG_KEY_ID}" -abs -o Release.gpg Release
-          gpg --default-key "${GPG_KEY_ID}" --clearsign -o InRelease Release
+          # Sign Release (remove old signatures first)
+          rm -f Release.gpg InRelease
+          gpg --batch --default-key "${GPG_KEY_ID}" -abs -o Release.gpg Release
+          gpg --batch --default-key "${GPG_KEY_ID}" --clearsign -o InRelease Release
           cd ../..
 
       - name: Export public key
