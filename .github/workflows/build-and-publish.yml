@@ -110,11 +110,16 @@ jobs:
       - name: Build .deb package
         run: debuild -d -us -uc -b
 
+      - name: Collect .deb files
+        run: |
+          mkdir -p /tmp/debs
+          cp ../*.deb /tmp/debs/
+
       - name: Upload .deb artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}-${{ matrix.arch }}
-          path: ../*.deb
+          path: /tmp/debs/*.deb
 
   publish:
     needs: build
