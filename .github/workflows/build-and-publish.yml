@@ -13,11 +13,8 @@ on:
           - gearsystem
           - gearcoleco
           - gearlynx
-      tag:
-        description: 'Git tag to checkout (e.g., 1.7.2 or gearboy-3.4.0)'
-        required: true
       version:
-        description: 'Version number (e.g., 1.7.2)'
+        description: 'Version (e.g., 1.7.2)'
         required: true
       distro:
         description: 'Ubuntu codename'
@@ -45,7 +42,6 @@ jobs:
       - name: Resolve inputs
         run: |
           echo "EMU=${{ inputs.emulator || github.event.client_payload.emulator }}" >> $GITHUB_ENV
-          echo "TAG=${{ inputs.tag || github.event.client_payload.tag }}" >> $GITHUB_ENV
           echo "VERSION=${{ inputs.version || github.event.client_payload.version }}" >> $GITHUB_ENV
           echo "DISTRO=${{ inputs.distro || github.event.client_payload.distro }}" >> $GITHUB_ENV
 
@@ -87,7 +83,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: drhelius/${{ env.REPO_NAME }}
-          ref: ${{ env.TAG }}
+          ref: ${{ env.VERSION }}
 
       - name: Prepare debian packaging
         run: |
