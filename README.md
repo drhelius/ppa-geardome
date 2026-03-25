@@ -25,7 +25,7 @@ echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/geardome-archive-keyri
   sudo tee /etc/apt/sources.list.d/geardome.list
 ```
 
-> **Note:** Replace `noble` with `jammy` if you are on Ubuntu 22.04.
+> **Note:** Replace `noble` with your Ubuntu codename: `resolute` (26.04), `noble` (24.04), or `jammy` (22.04).
 
 Then install any emulator:
 

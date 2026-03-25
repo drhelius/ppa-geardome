@@ -22,6 +22,7 @@ on:
         default: 'noble'
         type: choice
         options:
+          - resolute
           - noble
           - jammy
 
@@ -89,9 +90,13 @@ jobs:
             libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev libwayland-dev \
             libdecor-0-dev libdrm-dev libgbm-dev libgl1-mesa-dev \
             libegl1-mesa-dev libdbus-1-dev libudev-dev
+          # Install libsdl3-dev from apt on resolute+, build from source otherwise
+          if apt-cache show libsdl3-dev > /dev/null 2>&1; then
+            apt-get install -y libsdl3-dev
+          fi
 
       - name: Build and install SDL3
-        if: steps.check.outputs.skip != 'true'
+        if: steps.check.outputs.skip != 'true' && !contains(fromJSON('["resolute"]'), env.DISTRO)
         run: |
           echo "Building SDL3 ${{ env.SDL3_TAG }}"
           git clone --depth 1 --branch "${{ env.SDL3_TAG }}" https://github.com/libsdl-org/SDL.git /tmp/SDL3
