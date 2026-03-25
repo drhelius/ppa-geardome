@@ -1,0 +1,36 @@
+Package: geargrafx
+Version: 1.7.3-1~ppa1~jammy1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 3289
+Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
+Filename: pool/main/geargrafx/geargrafx_1.7.3-1~ppa1~jammy1_amd64.deb
+Size: 1309370
+MD5sum: 939d31c56fed03aa7c40ee138e6fabef
+SHA1: 73bf6e826ebf2275e0959760cafed58455231089
+SHA256: 9735a102f20eff24c90d0b2ccc89bafe9793205c9b410ce70b15ba09b408f243
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Geargrafx
+Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
+ Geargrafx is a cross-platform emulator for PC Engine / TurboGrafx-16,
+ SuperGrafx and CD-ROM² software.
+
+Package: gearlynx
+Version: 1.2.4-1~ppa1~noble1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2588
+Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
+Filename: pool/main/gearlynx/gearlynx_1.2.4-1~ppa1~noble1_amd64.deb
+Size: 1123788
+MD5sum: 214311525ba46bf31a6b3cee4559fa35
+SHA1: e2a9bad27944ea5a02e8baad38db47b377f40ac4
+SHA256: a6e9b77d8f7e36d5907e37bf5bf8e04d2eeedc842d1dca8e1b57475840eafdba
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Gearlynx
+Description: Atari Lynx emulator
+ Gearlynx is a very accurate cross-platform Atari Lynx emulator
+ written in C++.
+
