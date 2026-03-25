@@ -1,10 +1,28 @@
+Package: geargrafx
+Version: 1.7.3-1~ppa1~noble1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 3281
+Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
+Filename: pool/main/geargrafx/geargrafx_1.7.3-1~ppa1~noble1_amd64.deb
+Size: 1336540
+MD5sum: cc919f39dced9c3c3b2f7b70527ae068
+SHA1: b290059b438fb3fdc6d15c6a7e33c6d03d445c9f
+SHA256: 12b8b19ebd33036141d4e1e2f384ae97ad731a72d4fdae536c4b2438b9e66257
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Geargrafx
+Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
+ Geargrafx is a cross-platform emulator for PC Engine / TurboGrafx-16,
+ SuperGrafx and CD-ROM² software.
+
 Package: gearlynx
 Version: 1.2.4-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2588
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearlynx/gearlynx_1.2.4-1~ppa1~noble1_amd64.deb
+Filename: pool/main/gearsystem/gearlynx_1.2.4-1~ppa1~noble1_amd64.deb
 Size: 1123788
 MD5sum: 214311525ba46bf31a6b3cee4559fa35
 SHA1: e2a9bad27944ea5a02e8baad38db47b377f40ac4
@@ -15,4 +33,22 @@ Homepage: https://github.com/drhelius/Gearlynx
 Description: Atari Lynx emulator
  Gearlynx is a very accurate cross-platform Atari Lynx emulator
  written in C++.
+
+Package: gearsystem
+Version: 3.9.2-1~ppa1~jammy1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2397
+Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
+Filename: pool/main/gearsystem/gearsystem_3.9.2-1~ppa1~jammy1_amd64.deb
+Size: 1064946
+MD5sum: dae8ef94f91ba8644ffb7521707fa19b
+SHA1: d0f9ab7dde066e8e9810353c9353a39e4d4e951c
+SHA256: 71864adc3e5825171eada0cc2972ece9119eb289a5c29bf64ea8e9284999bb13
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Gearsystem
+Description: Sega Master System / Game Gear / SG-1000 emulator
+ Gearsystem is a very accurate, cross-platform Sega Master System /
+ Game Gear / SG-1000 emulator written in C++.
 
