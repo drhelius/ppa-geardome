@@ -42,13 +42,24 @@ jobs:
           - runner: ubuntu-24.04-arm
             arch: arm64
     runs-on: ${{ matrix.runner }}
-    if: ${{ !(matrix.arch == 'arm64' && (inputs.distro || github.event.client_payload.distro) == 'jammy') }}
     container:
       image: ubuntu:${{ inputs.distro || github.event.client_payload.distro }}
     env:
       DEBIAN_FRONTEND: noninteractive
     steps:
+      - name: Check if build is needed
+        id: check
+        run: |
+          DISTRO="${{ inputs.distro || github.event.client_payload.distro }}"
+          ARCH="${{ matrix.arch }}"
+          if [ "$ARCH" = "arm64" ] && [ "$DISTRO" = "jammy" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Resolve inputs
+        if: steps.check.outputs.skip != 'true'
         run: |
           echo "EMU=${{ inputs.emulator || github.event.client_payload.emulator }}" >> $GITHUB_ENV
           echo "VERSION=${{ inputs.version || github.event.client_payload.version }}" >> $GITHUB_ENV
@@ -56,6 +67,7 @@ jobs:
           echo "ARCH=${{ matrix.arch }}" >> $GITHUB_ENV
 
       - name: Map emulator to repo name
+        if: steps.check.outputs.skip != 'true'
         run: |
           case "$EMU" in
             geargrafx)  REPO_NAME="Geargrafx" ;;
@@ -68,6 +80,7 @@ jobs:
           echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
 
       - name: Install build tools
+        if: steps.check.outputs.skip != 'true'
         run: |
           apt-get update
           apt-get install -y git curl ca-certificates cmake build-essential \
@@ -78,6 +91,7 @@ jobs:
             libegl1-mesa-dev libdbus-1-dev libudev-dev
 
       - name: Build and install SDL3
+        if: steps.check.outputs.skip != 'true'
         run: |
           echo "Building SDL3 ${{ env.SDL3_TAG }}"
           git clone --depth 1 --branch "${{ env.SDL3_TAG }}" https://github.com/libsdl-org/SDL.git /tmp/SDL3
@@ -90,12 +104,14 @@ jobs:
           rm -rf /tmp/SDL3
 
       - name: Checkout emulator source
+        if: steps.check.outputs.skip != 'true'
         uses: actions/checkout@v4
         with:
           repository: drhelius/${{ env.REPO_NAME }}
           ref: ${{ env.VERSION }}
 
       - name: Prepare debian packaging
+        if: steps.check.outputs.skip != 'true'
         run: |
           cp -r platforms/linux/debian .
 
@@ -110,14 +126,17 @@ jobs:
           sed -i 's/^          //' debian/changelog
 
       - name: Build .deb package
+        if: steps.check.outputs.skip != 'true'
         run: debuild -d -us -uc -b
 
       - name: Collect .deb files
+        if: steps.check.outputs.skip != 'true'
         run: |
           mkdir -p /tmp/debs
           cp ../*.deb /tmp/debs/
 
       - name: Upload .deb artifact
+        if: steps.check.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}-${{ matrix.arch }}
