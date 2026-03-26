@@ -1,3 +1,21 @@
+Package: gearboy
+Version: 3.8.0-1~ppa1~resolute1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2244
+Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
+Filename: pool/main/gearboy/gearboy_3.8.0-1~ppa1~resolute1_amd64.deb
+Size: 1038010
+MD5sum: 5bf0ba3df807b105c31e1ac25d033177
+SHA1: 000094187703dd7933a317ce14870d0a3bc41ab3
+SHA256: 631459a5a1f661fb6436f7c6f0008e737d36661e95282a1e1a326a0f1d90324a
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Gearboy
+Description: Game Boy / Game Boy Color emulator
+ Gearboy is a cross-platform Game Boy / Game Boy Color emulator
+ written in C++.
+
 Package: geargrafx
 Version: 1.7.3-1~ppa1~noble1
 Architecture: amd64
