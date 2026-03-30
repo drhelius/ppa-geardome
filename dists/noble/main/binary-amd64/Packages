@@ -53,16 +53,16 @@ Description: Atari Lynx emulator
  written in C++.
 
 Package: gearsystem
-Version: 3.9.2-1~ppa1~noble1
+Version: 3.9.3-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 2369
+Installed-Size: 2377
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/gearsystem/gearsystem_3.9.2-1~ppa1~noble1_amd64.deb
-Size: 1075890
-MD5sum: 879ffe1a97f6448c5f45b776dc6ec854
-SHA1: d8d2f143cde35c442da046cc416b6deb6a321d98
-SHA256: bbaf36769f1a2f9c9ab1970e09eb1142bbc81550f1d8037875993324e7b93fce
+Filename: pool/noble/main/gearsystem/gearsystem_3.9.3-1~ppa1~noble1_amd64.deb
+Size: 1077462
+MD5sum: 186c5eda6b87c7d70d8a1f76e3a74e33
+SHA1: edae59633f8bea62e644d3d8eb1e2145c4396a07
+SHA256: ac43147348e07ce78337c7d5921a23f96bef1cf8686d5cc5110a6445e5852d9b
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearsystem
