@@ -16,3 +16,21 @@ Description: Game Boy / Game Boy Color emulator
  Gearboy is a cross-platform Game Boy / Game Boy Color emulator
  written in C++.
 
+Package: gearlynx
+Version: 1.2.5-1~ppa1~resolute1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2632
+Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
+Filename: pool/resolute/main/gearlynx/gearlynx_1.2.5-1~ppa1~resolute1_amd64.deb
+Size: 1120686
+MD5sum: f26fb5fd0b0a15f8ee708cf0aaf6bc51
+SHA1: 2306dff99176633198a49118722bab8be78e3115
+SHA256: 6e57b4e835675c56b4311090a32432c8b9eb8c4216f0ee03211e1771a80e1ce0
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Gearlynx
+Description: Atari Lynx emulator
+ Gearlynx is a very accurate cross-platform Atari Lynx emulator
+ written in C++.
+
