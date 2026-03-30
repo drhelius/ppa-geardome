@@ -17,16 +17,16 @@ Description: Game Boy / Game Boy Color emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.3-1~ppa1~jammy1
+Version: 1.7.4-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3289
+Installed-Size: 3313
 Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
-Filename: pool/jammy/main/geargrafx/geargrafx_1.7.3-1~ppa1~jammy1_amd64.deb
-Size: 1309370
-MD5sum: 939d31c56fed03aa7c40ee138e6fabef
-SHA1: 73bf6e826ebf2275e0959760cafed58455231089
-SHA256: 9735a102f20eff24c90d0b2ccc89bafe9793205c9b410ce70b15ba09b408f243
+Filename: pool/jammy/main/geargrafx/geargrafx_1.7.4-1~ppa1~jammy1_amd64.deb
+Size: 1314404
+MD5sum: 5baee3d7eebdd2a5502f930aa707a469
+SHA1: ce2046878690c3043fe85af2be2a287da7494969
+SHA256: 45d6efd26c1926e453886a5ab4e2ff3c38a531d007e937c24ab2b9c6a07b331b
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
