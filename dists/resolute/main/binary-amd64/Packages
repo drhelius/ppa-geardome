@@ -5,10 +5,10 @@ Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2272
 Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
 Filename: pool/main/gearboy/gearboy_3.8.1-1~ppa1~resolute1_amd64.deb
-Size: 1049324
-MD5sum: e6c07d60109dd23f474dd7bd7c8b112c
-SHA1: 4b187a762f3f7dd635d403235865dd984eb12bce
-SHA256: f6eca1b8b2c5e1caf197d77d8b6e624100166e4c2921712e982bda03b15dbb7a
+Size: 1049496
+MD5sum: d3b86400208a5fd97fcae2b6366f1099
+SHA1: edfad0b35ea6c685e97ed6dfa0ce26d9b231c298
+SHA256: ea95df0e9988ce7b64f23e82eeb171876477ebb8127abae0eaad0dd6bc51417d
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearboy
@@ -40,7 +40,7 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2588
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/geargrafx/gearlynx_1.2.4-1~ppa1~noble1_amd64.deb
+Filename: pool/main/gearlynx/gearlynx_1.2.4-1~ppa1~noble1_amd64.deb
 Size: 1123788
 MD5sum: 214311525ba46bf31a6b3cee4559fa35
 SHA1: e2a9bad27944ea5a02e8baad38db47b377f40ac4
@@ -58,7 +58,7 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2369
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearboy/gearsystem_3.9.2-1~ppa1~noble1_amd64.deb
+Filename: pool/main/gearsystem/gearsystem_3.9.2-1~ppa1~noble1_amd64.deb
 Size: 1075890
 MD5sum: 879ffe1a97f6448c5f45b776dc6ec854
 SHA1: d8d2f143cde35c442da046cc416b6deb6a321d98
