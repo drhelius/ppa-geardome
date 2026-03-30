@@ -4,11 +4,11 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2248
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearboy/gearboy_3.8.1-1~ppa1~noble1_amd64.deb
-Size: 1060164
-MD5sum: 142ef77871afa43e506d82e600253460
-SHA1: 6051c1d754b939d0fdf9c38c08c49571dbf79dde
-SHA256: 8fb8b8cecac25dac075283a8ffceffbd63375c127f5d0cf56ec83d87e0d3b33f
+Filename: pool/noble/main/gearboy/gearboy_3.8.1-1~ppa1~noble1_amd64.deb
+Size: 1060122
+MD5sum: d59903689f21c0e40e771da76e8c7c38
+SHA1: 12da216509106c198d2fe04e8724f60ccfe7d962
+SHA256: 22888052d8eb94b2022cac4737e15ddd8c3d0826e45f88f1a9653046ad0e6461
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearboy
@@ -22,7 +22,7 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 3281
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/geargrafx/geargrafx_1.7.3-1~ppa1~noble1_amd64.deb
+Filename: pool/noble/main/geargrafx/geargrafx_1.7.3-1~ppa1~noble1_amd64.deb
 Size: 1336540
 MD5sum: cc919f39dced9c3c3b2f7b70527ae068
 SHA1: b290059b438fb3fdc6d15c6a7e33c6d03d445c9f
@@ -40,7 +40,7 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2588
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearlynx/gearlynx_1.2.4-1~ppa1~noble1_amd64.deb
+Filename: pool/noble/main/gearlynx/gearlynx_1.2.4-1~ppa1~noble1_amd64.deb
 Size: 1123788
 MD5sum: 214311525ba46bf31a6b3cee4559fa35
 SHA1: e2a9bad27944ea5a02e8baad38db47b377f40ac4
@@ -58,7 +58,7 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2369
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearsystem/gearsystem_3.9.2-1~ppa1~noble1_amd64.deb
+Filename: pool/noble/main/gearsystem/gearsystem_3.9.2-1~ppa1~noble1_amd64.deb
 Size: 1075890
 MD5sum: 879ffe1a97f6448c5f45b776dc6ec854
 SHA1: d8d2f143cde35c442da046cc416b6deb6a321d98

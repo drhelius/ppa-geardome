@@ -4,11 +4,11 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2073
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearboy/gearboy_3.8.1-1~ppa1~noble1_arm64.deb
-Size: 1020070
-MD5sum: a9da2b25844a046847203768d8280fb5
-SHA1: 23389fc9a716194daf68f86e1ee0b25141601add
-SHA256: 8ce73ccbceb4b58fe1b7b53c22cedf30b019680f3852df8e492003f3a995c8e3
+Filename: pool/noble/main/gearboy/gearboy_3.8.1-1~ppa1~noble1_arm64.deb
+Size: 1020118
+MD5sum: ed5156d2a9b4238580e046f1048fef57
+SHA1: f2a35616c9928936bedcb12c2f8f97b9fe013576
+SHA256: 092a6ff4e8195d36791c926294cfcb267d88c5ec96118d20555af67fa6379cda
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearboy
@@ -22,7 +22,7 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2910
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/geargrafx/geargrafx_1.7.3-1~ppa1~noble1_arm64.deb
+Filename: pool/noble/main/geargrafx/geargrafx_1.7.3-1~ppa1~noble1_arm64.deb
 Size: 1276132
 MD5sum: e00e9dbb64216c8a1301d30325e51619
 SHA1: 169fc44d3eb7db3d06c92e35e3b87dbdd283f23c
@@ -40,7 +40,7 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2352
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearlynx/gearlynx_1.2.4-1~ppa1~noble1_arm64.deb
+Filename: pool/noble/main/gearlynx/gearlynx_1.2.4-1~ppa1~noble1_arm64.deb
 Size: 1079948
 MD5sum: da0f15c6cf5f3b92cb872d0f21eeb0d3
 SHA1: 3b8a94a121a0871406eb2add087aef21bf0e132a
@@ -58,7 +58,7 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 2218
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearsystem/gearsystem_3.9.2-1~ppa1~noble1_arm64.deb
+Filename: pool/noble/main/gearsystem/gearsystem_3.9.2-1~ppa1~noble1_arm64.deb
 Size: 1042902
 MD5sum: 579c7e0e2ec0f985a327bcbe2f00cb65
 SHA1: cfd2af9f5d9cc975b7915731a1bdb5013ee4188a
