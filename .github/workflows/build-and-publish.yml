@@ -188,7 +188,7 @@ jobs:
 
       - name: Update APT repository
         run: |
-          POOL="pool/main/${EMU}"
+          POOL="pool/${DISTRO}/main/${EMU}"
 
           # Remove old .deb for this emulator (keep only latest)
           mkdir -p "${POOL}"
@@ -199,7 +199,7 @@ jobs:
           for ARCH in amd64 arm64; do
             DIST_DIR="dists/${DISTRO}/main/binary-${ARCH}"
             mkdir -p "${DIST_DIR}"
-            dpkg-scanpackages --arch "${ARCH}" pool/ > "${DIST_DIR}/Packages"
+            dpkg-scanpackages --arch "${ARCH}" "pool/${DISTRO}/" > "${DIST_DIR}/Packages"
             gzip -k -f "${DIST_DIR}/Packages"
           done
 
