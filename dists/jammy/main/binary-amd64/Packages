@@ -1,14 +1,14 @@
 Package: gearboy
-Version: 3.8.1-1~ppa1~resolute1
+Version: 3.8.1-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 2272
-Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
-Filename: pool/main/gearboy/gearboy_3.8.1-1~ppa1~resolute1_amd64.deb
-Size: 1049324
-MD5sum: e6c07d60109dd23f474dd7bd7c8b112c
-SHA1: 4b187a762f3f7dd635d403235865dd984eb12bce
-SHA256: f6eca1b8b2c5e1caf197d77d8b6e624100166e4c2921712e982bda03b15dbb7a
+Installed-Size: 2256
+Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
+Filename: pool/jammy/main/gearboy/gearboy_3.8.1-1~ppa1~jammy1_amd64.deb
+Size: 1040890
+MD5sum: aac50acf614ffb82d5325baf65cee76c
+SHA1: 198358b238b28a3459d4b18e3df1476216d4d99a
+SHA256: 15a71b869b6521ca1461553baa85ca3a9349697d5177f387cd3d88075b85de5c
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearboy
@@ -17,16 +17,16 @@ Description: Game Boy / Game Boy Color emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.3-1~ppa1~noble1
+Version: 1.7.3-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3281
-Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/geargrafx/geargrafx_1.7.3-1~ppa1~noble1_amd64.deb
-Size: 1336540
-MD5sum: cc919f39dced9c3c3b2f7b70527ae068
-SHA1: b290059b438fb3fdc6d15c6a7e33c6d03d445c9f
-SHA256: 12b8b19ebd33036141d4e1e2f384ae97ad731a72d4fdae536c4b2438b9e66257
+Installed-Size: 3289
+Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
+Filename: pool/jammy/main/geargrafx/geargrafx_1.7.3-1~ppa1~jammy1_amd64.deb
+Size: 1309370
+MD5sum: 939d31c56fed03aa7c40ee138e6fabef
+SHA1: 73bf6e826ebf2275e0959760cafed58455231089
+SHA256: 9735a102f20eff24c90d0b2ccc89bafe9793205c9b410ce70b15ba09b408f243
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -35,16 +35,16 @@ Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
  SuperGrafx and CD-ROM² software.
 
 Package: gearlynx
-Version: 1.2.4-1~ppa1~noble1
+Version: 1.2.4-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 2588
-Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearlynx/gearlynx_1.2.4-1~ppa1~noble1_amd64.deb
-Size: 1123788
-MD5sum: 214311525ba46bf31a6b3cee4559fa35
-SHA1: e2a9bad27944ea5a02e8baad38db47b377f40ac4
-SHA256: a6e9b77d8f7e36d5907e37bf5bf8e04d2eeedc842d1dca8e1b57475840eafdba
+Installed-Size: 2568
+Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
+Filename: pool/jammy/main/gearlynx/gearlynx_1.2.4-1~ppa1~jammy1_amd64.deb
+Size: 1100438
+MD5sum: c62972c3a74d6a661a97e395a7c5289a
+SHA1: 582b3270ea6ad4590cab4158293c6f594096cbcc
+SHA256: 8423c66813b437a544cd74a068903228a8ac6150dbb8542c1062533c4c4e8536
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
@@ -53,16 +53,16 @@ Description: Atari Lynx emulator
  written in C++.
 
 Package: gearsystem
-Version: 3.9.2-1~ppa1~noble1
+Version: 3.9.2-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 2369
-Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/main/gearsystem/gearsystem_3.9.2-1~ppa1~noble1_amd64.deb
-Size: 1075890
-MD5sum: 879ffe1a97f6448c5f45b776dc6ec854
-SHA1: d8d2f143cde35c442da046cc416b6deb6a321d98
-SHA256: bbaf36769f1a2f9c9ab1970e09eb1142bbc81550f1d8037875993324e7b93fce
+Installed-Size: 2397
+Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
+Filename: pool/jammy/main/gearsystem/gearsystem_3.9.2-1~ppa1~jammy1_amd64.deb
+Size: 1064946
+MD5sum: dae8ef94f91ba8644ffb7521707fa19b
+SHA1: d0f9ab7dde066e8e9810353c9353a39e4d4e951c
+SHA256: 71864adc3e5825171eada0cc2972ece9119eb289a5c29bf64ea8e9284999bb13
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearsystem
