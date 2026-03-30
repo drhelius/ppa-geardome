@@ -1,0 +1,72 @@
+Package: gearboy
+Version: 3.8.1-1~ppa1~resolute1
+Architecture: arm64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2073
+Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
+Filename: pool/main/gearboy/gearboy_3.8.1-1~ppa1~resolute1_arm64.deb
+Size: 1011472
+MD5sum: 0e4a2c22a10edf265b87371841353612
+SHA1: c7c52ada126b1bcf1e21abdfc3cab8ee89cee027
+SHA256: 97fcac945499eceac75df219582009a69bec07a638db7e35cdfca4a4fb12533f
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Gearboy
+Description: Game Boy / Game Boy Color emulator
+ Gearboy is a cross-platform Game Boy / Game Boy Color emulator
+ written in C++.
+
+Package: geargrafx
+Version: 1.7.3-1~ppa1~noble1
+Architecture: arm64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2910
+Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
+Filename: pool/main/geargrafx/geargrafx_1.7.3-1~ppa1~noble1_arm64.deb
+Size: 1276132
+MD5sum: e00e9dbb64216c8a1301d30325e51619
+SHA1: 169fc44d3eb7db3d06c92e35e3b87dbdd283f23c
+SHA256: 2259f7a35c2b8a4b625f84e22b3eb19161e67b3eeec507b82aac9c3a0ad7f018
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Geargrafx
+Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
+ Geargrafx is a cross-platform emulator for PC Engine / TurboGrafx-16,
+ SuperGrafx and CD-ROM² software.
+
+Package: gearlynx
+Version: 1.2.4-1~ppa1~noble1
+Architecture: arm64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2352
+Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
+Filename: pool/main/geargrafx/gearlynx_1.2.4-1~ppa1~noble1_arm64.deb
+Size: 1079948
+MD5sum: da0f15c6cf5f3b92cb872d0f21eeb0d3
+SHA1: 3b8a94a121a0871406eb2add087aef21bf0e132a
+SHA256: 13ae2bb7568cd140b718315ce220b76b671534308f9bebaea3966a3d5806fa81
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Gearlynx
+Description: Atari Lynx emulator
+ Gearlynx is a very accurate cross-platform Atari Lynx emulator
+ written in C++.
+
+Package: gearsystem
+Version: 3.9.2-1~ppa1~noble1
+Architecture: arm64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2218
+Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
+Filename: pool/main/gearboy/gearsystem_3.9.2-1~ppa1~noble1_arm64.deb
+Size: 1042902
+MD5sum: 579c7e0e2ec0f985a327bcbe2f00cb65
+SHA1: cfd2af9f5d9cc975b7915731a1bdb5013ee4188a
+SHA256: 034a57ceda87ddcaaab08a2139383ede5ce393129f5dd03a3f652262c4c4b4bb
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Gearsystem
+Description: Sega Master System / Game Gear / SG-1000 emulator
+ Gearsystem is a very accurate, cross-platform Sega Master System /
+ Game Gear / SG-1000 emulator written in C++.
+
