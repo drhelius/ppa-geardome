@@ -16,6 +16,24 @@ Description: Game Boy / Game Boy Color emulator
  Gearboy is a cross-platform Game Boy / Game Boy Color emulator
  written in C++.
 
+Package: geargrafx
+Version: 1.7.4-1~ppa1~resolute1
+Architecture: arm64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 2974
+Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
+Filename: pool/resolute/main/geargrafx/geargrafx_1.7.4-1~ppa1~resolute1_arm64.deb
+Size: 1273832
+MD5sum: ffde92b3fefd1e351bd11453991889e2
+SHA1: a2b99cdb03b9f69249e2e5a8781b1fac7d9ca580
+SHA256: 3f3956e6f1e9387b3f4a050e18b6d2e27ed79a6ab07ac2c4d4008d63bac640d5
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Geargrafx
+Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
+ Geargrafx is a cross-platform emulator for PC Engine / TurboGrafx-16,
+ SuperGrafx and CD-ROM² software.
+
 Package: gearlynx
 Version: 1.2.5-1~ppa1~resolute1
 Architecture: arm64
