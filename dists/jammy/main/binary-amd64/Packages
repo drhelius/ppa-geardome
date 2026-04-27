@@ -35,16 +35,16 @@ Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
  SuperGrafx and CD-ROM² software.
 
 Package: gearlynx
-Version: 1.2.6-1~ppa1~jammy1
+Version: 1.2.9-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 2596
+Installed-Size: 3405
 Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
-Filename: pool/jammy/main/gearlynx/gearlynx_1.2.6-1~ppa1~jammy1_amd64.deb
-Size: 1107958
-MD5sum: 3a7fbb1997d346126d4fff206c241932
-SHA1: 288d87e27de2e7107623c88b73b8ab21c0963d2e
-SHA256: 40a7288a6e76d295b34b9837ba3cefcf93b7f6271071e64c1615b8406be09ccb
+Filename: pool/jammy/main/gearlynx/gearlynx_1.2.9-1~ppa1~jammy1_amd64.deb
+Size: 1205056
+MD5sum: b8db31a26aba5794b5b640b1c9d647ad
+SHA1: 815e9351e1d69b30abe2ecc120fc97ae289d809e
+SHA256: b3c8c969e0ece8cd442c7776c4644f8b434ca4bfad707ff292ad094be4034a22
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
