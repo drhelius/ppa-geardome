@@ -115,6 +115,10 @@ jobs:
           repository: drhelius/${{ env.REPO_NAME }}
           ref: ${{ env.VERSION }}
 
+      - name: Trust checkout directory
+        if: steps.check.outputs.skip != 'true'
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Prepare debian packaging
         if: steps.check.outputs.skip != 'true'
         run: |
