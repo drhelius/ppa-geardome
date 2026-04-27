@@ -16,6 +16,24 @@ Description: Game Boy / Game Boy Color emulator
  Gearboy is a cross-platform Game Boy / Game Boy Color emulator
  written in C++.
 
+Package: gearcoleco
+Version: 1.6.0-1~ppa1~resolute1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 3098
+Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
+Filename: pool/resolute/main/gearcoleco/gearcoleco_1.6.0-1~ppa1~resolute1_amd64.deb
+Size: 1086126
+MD5sum: 989ff1f8f791faed9c1f98dbd335b830
+SHA1: 9483bf342c21c6d54935c021ae6faebb13f88ad9
+SHA256: a29ad3c5190db8bcbd80bfc10d5aac7d434907de24f188eb9de9771736fc4359
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Gearcoleco
+Description: ColecoVision emulator
+ Gearcoleco is a very accurate cross-platform ColecoVision emulator
+ written in C++.
+
 Package: geargrafx
 Version: 1.7.5-1~ppa1~resolute1
 Architecture: amd64
