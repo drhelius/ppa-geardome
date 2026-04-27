@@ -6,7 +6,7 @@ This is the official APT repository (PPA) for [DrHelius](https://github.com/drhe
 
 | Emulator | System | Install Command |
 |----------|--------|-----------------|
-| [Gearboy](https://github.com/drhelius/Gearboy) | Game Boy / Game Boy Color | `sudo apt install gearboy` |
+| [Gearboy](https://github.com/drhelius/Gearboy) | Game Boy / Game Boy Color / Super Game Boy | `sudo apt install gearboy` |
 | [Gearsystem](https://github.com/drhelius/Gearsystem) | Sega Master System / Game Gear / SG-1000 | `sudo apt install gearsystem` |
 | [Gearcoleco](https://github.com/drhelius/Gearcoleco) | ColecoVision | `sudo apt install gearcoleco` |
 | [Geargrafx](https://github.com/drhelius/Geargrafx) | TurboGrafx-16 / PC Engine / SuperGrafx / CD-ROM² | `sudo apt install geargrafx` |
