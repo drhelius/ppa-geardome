@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.5-1~ppa1~resolute1
+Version: 1.7.6-1~ppa1~resolute1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 4009
+Installed-Size: 4153
 Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
-Filename: pool/resolute/main/geargrafx/geargrafx_1.7.5-1~ppa1~resolute1_amd64.deb
-Size: 1395698
-MD5sum: c50754bfcc73c8eb00d525b43337906d
-SHA1: 203d3d6d7d6d6f169f2297ed6dd99b84f9bf44ca
-SHA256: 64bd1792c3a9e76012d190e44c97864f97485fad58ee36eb2d69784106f43d57
+Filename: pool/resolute/main/geargrafx/geargrafx_1.7.6-1~ppa1~resolute1_amd64.deb
+Size: 1416066
+MD5sum: 7f04d431af846d4bb2df52487d652ec7
+SHA1: 0c0dba50f7394f6ff09448e9c8d0181f8220223c
+SHA256: fd481ef2edbfed610c0a87be3d648a8d040b9df7cb41f7c5cf9f73a83ec7e9f9
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
