@@ -1,14 +1,14 @@
 Package: gearboy
-Version: 3.8.4-1~ppa1~jammy1
+Version: 3.8.5-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 2951
+Installed-Size: 3115
 Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
-Filename: pool/jammy/main/gearboy/gearboy_3.8.4-1~ppa1~jammy1_amd64.deb
-Size: 1113642
-MD5sum: 65a3b43a4e94fab6143f7d5288633c56
-SHA1: e44085c12ec058914bfcbc0947f8c234d2b38a46
-SHA256: ca5f44c5ac6cb82ff1190678c104c7386b6e34b94b233eaaa8fa8866092f7d34
+Filename: pool/jammy/main/gearboy/gearboy_3.8.5-1~ppa1~jammy1_amd64.deb
+Size: 1155080
+MD5sum: dd01a7d36643b9e1a8d6b6a313f48e4c
+SHA1: 36b007d978ba73a9eba9144ab9848ed00045f46d
+SHA256: 9ffb8fc4d42d48419405c97461e04c75c5953d00a2125e64e5a08743486f1d9d
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearboy
