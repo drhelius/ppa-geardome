@@ -1,14 +1,14 @@
 Package: gearboy
-Version: 3.8.6-1~ppa1~noble1
+Version: 3.8.7-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3163
+Installed-Size: 3203
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/gearboy/gearboy_3.8.6-1~ppa1~noble1_amd64.deb
-Size: 1193230
-MD5sum: 814326578ed7c0747a2fa9e33c5f934f
-SHA1: 0af1267cd28d13e28f82cd3e2dec43555d068bf8
-SHA256: 4585fb003cfbb121464cc12bea86af39e1bf90ee6d36066eb29ccfaa0b5b7da9
+Filename: pool/noble/main/gearboy/gearboy_3.8.7-1~ppa1~noble1_amd64.deb
+Size: 1207586
+MD5sum: 493e4ea26e0753e6adf6f2fe34a140c6
+SHA1: 55f3bdd5274ad02ca68137cef4b1572e994dd0ee
+SHA256: efa6e4fff90d57b3c1205e1d5b182a11ba8280cdb6c75f1dea9313dca3413f09
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearboy
