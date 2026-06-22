@@ -30,7 +30,7 @@ on:
     types: [build-package]
 
 env:
-  SDL3_TAG: release-3.2.14
+  SDL3_TAG: release-3.4.10
 
 jobs:
   build:
@@ -60,14 +60,42 @@ jobs:
           fi
 
       - name: Resolve inputs
+        id: resolve
         if: steps.check.outputs.skip != 'true'
         run: |
-          echo "EMU=${{ inputs.emulator || github.event.client_payload.emulator }}" >> $GITHUB_ENV
-          echo "VERSION=${{ inputs.version || github.event.client_payload.version }}" >> $GITHUB_ENV
-          echo "DISTRO=${{ inputs.distro || github.event.client_payload.distro }}" >> $GITHUB_ENV
+          EMU="${{ inputs.emulator || github.event.client_payload.emulator }}"
+          VERSION="${{ inputs.version || github.event.client_payload.version }}"
+          DISTRO="${{ inputs.distro || github.event.client_payload.distro }}"
+
+          echo "EMU=$EMU" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "DISTRO=$DISTRO" >> $GITHUB_ENV
           echo "ARCH=${{ matrix.arch }}" >> $GITHUB_ENV
+          echo "emu=$EMU" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "distro=$DISTRO" >> $GITHUB_OUTPUT
+
+          case "$DISTRO" in
+            resolute)
+              echo "BUILD_SDL3_PACKAGE=0" >> $GITHUB_ENV
+              echo "SDL3_RUNTIME_DEPS=libasound2t64, libpulse0, libpipewire-0.3-0t64" >> $GITHUB_ENV
+              ;;
+            noble)
+              echo "BUILD_SDL3_PACKAGE=1" >> $GITHUB_ENV
+              echo "SDL3_RUNTIME_DEPS=libasound2t64, libpulse0, libpipewire-0.3-0t64" >> $GITHUB_ENV
+              ;;
+            jammy)
+              echo "BUILD_SDL3_PACKAGE=1" >> $GITHUB_ENV
+              echo "SDL3_RUNTIME_DEPS=libasound2, libpulse0, libpipewire-0.3-0" >> $GITHUB_ENV
+              ;;
+            *)
+              echo "Unsupported distro: $DISTRO"
+              exit 1
+              ;;
+          esac
 
       - name: Map emulator to repo name
+        id: repo
         if: steps.check.outputs.skip != 'true'
         run: |
           case "$EMU" in
@@ -79,41 +107,165 @@ jobs:
             *) echo "Unknown emulator: $EMU" && exit 1 ;;
           esac
           echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
+          echo "repo_name=$REPO_NAME" >> $GITHUB_OUTPUT
 
       - name: Install build tools
         if: steps.check.outputs.skip != 'true'
         run: |
           apt-get update
+          apt-get install -y software-properties-common
+          add-apt-repository -y universe
+          apt-get update
+
           apt-get install -y git curl ca-certificates cmake build-essential \
             devscripts debhelper fakeroot lintian dpkg-dev gpg pkgconf \
             libgl-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev \
             libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev libwayland-dev \
             libdecor-0-dev libdrm-dev libgbm-dev libgl1-mesa-dev \
-            libegl1-mesa-dev libdbus-1-dev libudev-dev
-          # Install libsdl3-dev from apt on resolute+, build from source otherwise
-          if apt-cache show libsdl3-dev > /dev/null 2>&1; then
+            libegl1-mesa-dev libdbus-1-dev libudev-dev libasound2-dev \
+            libpulse-dev libpipewire-0.3-dev libxtst-dev
+
+          if [ "$BUILD_SDL3_PACKAGE" = "0" ]; then
+            if ! apt-cache show libsdl3-dev > /dev/null 2>&1; then
+              echo "libsdl3-dev is not available for $DISTRO"
+              exit 1
+            fi
             apt-get install -y libsdl3-dev
           fi
 
-      - name: Build and install SDL3
-        if: steps.check.outputs.skip != 'true' && !contains(fromJSON('["resolute"]'), env.DISTRO)
+      - name: Build and install SDL3 packages
+        if: steps.check.outputs.skip != 'true'
         run: |
-          echo "Building SDL3 ${{ env.SDL3_TAG }}"
-          git clone --depth 1 --branch "${{ env.SDL3_TAG }}" https://github.com/libsdl-org/SDL.git /tmp/SDL3
+          set -euo pipefail
+
+          if [ "$BUILD_SDL3_PACKAGE" != "1" ]; then
+            echo "Using distro SDL3 packages for $DISTRO"
+            exit 0
+          fi
+
+          SDL3_VERSION="${SDL3_TAG#release-}"
+          SDL3_DEB_VERSION="${SDL3_VERSION}-1~ppa1~${DISTRO}1"
+          DEB_ARCH="$(dpkg --print-architecture)"
+          MULTIARCH="$(dpkg-architecture -qDEB_HOST_MULTIARCH)"
+          INSTALL_ROOT="/tmp/sdl3-install"
+          RUNTIME_ROOT="/tmp/sdl3-runtime"
+          DEV_ROOT="/tmp/sdl3-dev"
+
+          echo "Building SDL3 $SDL3_TAG for $DISTRO/$DEB_ARCH"
+          rm -rf /tmp/SDL3 "$INSTALL_ROOT" "$RUNTIME_ROOT" "$DEV_ROOT" /tmp/sdl3-debs
+          git clone --depth 1 --branch "$SDL3_TAG" https://github.com/libsdl-org/SDL.git /tmp/SDL3
           cmake -S /tmp/SDL3 -B /tmp/SDL3/build \
             -DCMAKE_INSTALL_PREFIX=/usr \
+            -DCMAKE_INSTALL_LIBDIR="lib/${MULTIARCH}" \
+            -DSDL_ALSA=ON \
+            -DSDL_ALSA_SHARED=ON \
+            -DSDL_PIPEWIRE=ON \
+            -DSDL_PIPEWIRE_SHARED=ON \
+            -DSDL_PULSEAUDIO=ON \
+            -DSDL_PULSEAUDIO_SHARED=ON \
             -DSDL_TESTS=OFF \
             -DSDL_EXAMPLES=OFF
           cmake --build /tmp/SDL3/build -j$(nproc)
-          cmake --install /tmp/SDL3/build
+
+          SDL3_CONFIG="$(find /tmp/SDL3/build -path '*/SDL_build_config.h' -print -quit)"
+          for driver in SDL_AUDIO_DRIVER_ALSA SDL_AUDIO_DRIVER_PIPEWIRE SDL_AUDIO_DRIVER_PULSEAUDIO; do
+            grep -q "#define $driver 1" "$SDL3_CONFIG"
+          done
+
+          DESTDIR="$INSTALL_ROOT" cmake --install /tmp/SDL3/build
+
+          mkdir -p "$RUNTIME_ROOT/DEBIAN" "$RUNTIME_ROOT/usr/lib/${MULTIARCH}" "$RUNTIME_ROOT/usr/share/doc/libsdl3-0"
+          cp -a "$INSTALL_ROOT/usr/lib/${MULTIARCH}"/libSDL3.so.* "$RUNTIME_ROOT/usr/lib/${MULTIARCH}/"
+          cp /tmp/SDL3/LICENSE.txt "$RUNTIME_ROOT/usr/share/doc/libsdl3-0/copyright"
+          cat > "$RUNTIME_ROOT/DEBIAN/control" <<EOF
+          Package: libsdl3-0
+          Version: ${SDL3_DEB_VERSION}
+          Architecture: ${DEB_ARCH}
+          Multi-Arch: same
+          Section: libs
+          Priority: optional
+          Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+          Depends: libc6, ${SDL3_RUNTIME_DEPS}
+          Description: Simple DirectMedia Layer 3 runtime library
+           SDL is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware.
+          EOF
+          sed -i 's/^          //' "$RUNTIME_ROOT/DEBIAN/control"
+          echo "libSDL3 0 libsdl3-0 (>= ${SDL3_DEB_VERSION})" > "$RUNTIME_ROOT/DEBIAN/shlibs"
+          cat > "$RUNTIME_ROOT/DEBIAN/postinst" <<'EOF'
+          #!/bin/sh
+          set -e
+          if [ "$1" = "configure" ]; then
+              ldconfig
+          fi
+          EOF
+          sed -i 's/^          //' "$RUNTIME_ROOT/DEBIAN/postinst"
+          cat > "$RUNTIME_ROOT/DEBIAN/postrm" <<'EOF'
+          #!/bin/sh
+          set -e
+          ldconfig
+          EOF
+          sed -i 's/^          //' "$RUNTIME_ROOT/DEBIAN/postrm"
+          chmod 755 "$RUNTIME_ROOT/DEBIAN/postinst" "$RUNTIME_ROOT/DEBIAN/postrm"
+
+          mkdir -p "$DEV_ROOT/DEBIAN" "$DEV_ROOT/usr/include" "$DEV_ROOT/usr/lib/${MULTIARCH}" "$DEV_ROOT/usr/share/doc/libsdl3-dev"
+          cp -a "$INSTALL_ROOT/usr/include/SDL3" "$DEV_ROOT/usr/include/"
+          cp -a "$INSTALL_ROOT/usr/lib/${MULTIARCH}/libSDL3.so" "$DEV_ROOT/usr/lib/${MULTIARCH}/"
+          cp -a "$INSTALL_ROOT/usr/lib/${MULTIARCH}/pkgconfig" "$DEV_ROOT/usr/lib/${MULTIARCH}/"
+          cp -a "$INSTALL_ROOT/usr/lib/${MULTIARCH}/cmake" "$DEV_ROOT/usr/lib/${MULTIARCH}/"
+          cp /tmp/SDL3/LICENSE.txt "$DEV_ROOT/usr/share/doc/libsdl3-dev/copyright"
+          cat > "$DEV_ROOT/DEBIAN/control" <<EOF
+          Package: libsdl3-dev
+          Version: ${SDL3_DEB_VERSION}
+          Architecture: ${DEB_ARCH}
+          Multi-Arch: same
+          Section: libdevel
+          Priority: optional
+          Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+          Depends: libsdl3-0 (= ${SDL3_DEB_VERSION}), pkgconf
+          Description: Simple DirectMedia Layer 3 development files
+           SDL is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware.
+          EOF
+          sed -i 's/^          //' "$DEV_ROOT/DEBIAN/control"
+
+          mkdir -p /tmp/sdl3-debs
+          dpkg-deb --build "$RUNTIME_ROOT" "/tmp/sdl3-debs/libsdl3-0_${SDL3_DEB_VERSION}_${DEB_ARCH}.deb"
+          dpkg-deb --build "$DEV_ROOT" "/tmp/sdl3-debs/libsdl3-dev_${SDL3_DEB_VERSION}_${DEB_ARCH}.deb"
+
+          apt-get install -y /tmp/sdl3-debs/libsdl3-0_*.deb /tmp/sdl3-debs/libsdl3-dev_*.deb
+          pkg-config --modversion sdl3
           rm -rf /tmp/SDL3
+
+      - name: Verify SDL3 availability
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+
+          pkg-config --exists sdl3
+          echo "Using SDL3 $(pkg-config --modversion sdl3) from $(pkg-config --variable=libdir sdl3)"
+
+          SDL3_CONFIG="$(pkg-config --variable=includedir sdl3)/SDL3/SDL_build_config.h"
+          if [ ! -f "$SDL3_CONFIG" ]; then
+            SDL3_CONFIG="$(find /usr/include -name SDL_build_config.h -print -quit)"
+          fi
+
+          if [ -z "$SDL3_CONFIG" ] || [ ! -f "$SDL3_CONFIG" ]; then
+            echo "SDL_build_config.h not found"
+            exit 1
+          fi
+
+          for driver in SDL_AUDIO_DRIVER_ALSA SDL_AUDIO_DRIVER_PIPEWIRE SDL_AUDIO_DRIVER_PULSEAUDIO; do
+            if ! grep -q "#define $driver 1" "$SDL3_CONFIG"; then
+              echo "$driver is not enabled in SDL3"
+              exit 1
+            fi
+          done
 
       - name: Checkout emulator source
         if: steps.check.outputs.skip != 'true'
         uses: actions/checkout@v6
         with:
-          repository: drhelius/${{ env.REPO_NAME }}
-          ref: ${{ env.VERSION }}
+          repository: drhelius/${{ steps.repo.outputs.repo_name }}
+          ref: ${{ steps.resolve.outputs.version }}
 
       - name: Trust checkout directory
         if: steps.check.outputs.skip != 'true'
@@ -125,9 +277,9 @@ jobs:
           cp -r platforms/linux/debian .
 
           cat > debian/changelog << CHLOG
-          ${{ env.EMU }} (${{ env.VERSION }}-1~ppa1~${{ env.DISTRO }}1) ${{ env.DISTRO }}; urgency=medium
+          ${EMU} (${VERSION}-1~ppa1~${DISTRO}1) ${DISTRO}; urgency=medium
 
-            * Release ${{ env.VERSION }}.
+            * Release ${VERSION}.
 
            -- github-actions[bot] <github-actions[bot]@users.noreply.github.com>  $(date -R)
           CHLOG
@@ -138,17 +290,30 @@ jobs:
         if: steps.check.outputs.skip != 'true'
         run: debuild -d -us -uc -b
 
+      - name: Validate package dependencies
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+
+          PACKAGE="$(ls ../${EMU}_*.deb | head -1)"
+          DEPENDS="$(dpkg-deb -f "$PACKAGE" Depends)"
+          echo "Depends: $DEPENDS"
+          echo "$DEPENDS" | grep -q 'libsdl3-0'
+
       - name: Collect .deb files
         if: steps.check.outputs.skip != 'true'
         run: |
           mkdir -p /tmp/debs
           cp ../*.deb /tmp/debs/
+          if [ -d /tmp/sdl3-debs ]; then
+            cp /tmp/sdl3-debs/*.deb /tmp/debs/
+          fi
 
       - name: Upload .deb artifact
         if: steps.check.outputs.skip != 'true'
         uses: actions/upload-artifact@v7
         with:
-          name: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}-${{ matrix.arch }}
+          name: ${{ steps.resolve.outputs.emu }}-${{ steps.resolve.outputs.version }}-${{ steps.resolve.outputs.distro }}-${{ matrix.arch }}
           path: /tmp/debs/*.deb
 
   publish:
@@ -188,16 +353,23 @@ jobs:
 
       - name: Clean stale incoming files
         run: |
-          find incoming/ -name '*.deb' ! -name "${EMU}_*" -delete 2>/dev/null || true
+          find incoming/ -name '*.deb' ! -name "${EMU}_*" ! -name 'libsdl3-*.deb' -delete 2>/dev/null || true
 
       - name: Update APT repository
         run: |
-          POOL="pool/${DISTRO}/main/${EMU}"
+          EMU_POOL="pool/${DISTRO}/main/${EMU}"
 
           # Remove old .deb for this emulator (keep only latest)
-          mkdir -p "${POOL}"
-          rm -f "${POOL}"/${EMU}_*.deb
-          cp incoming/*.deb "${POOL}/"
+          mkdir -p "${EMU_POOL}"
+          rm -f "${EMU_POOL}"/${EMU}_*.deb
+          cp incoming/${EMU}_*.deb "${EMU_POOL}/"
+
+          if compgen -G "incoming/libsdl3-*.deb" > /dev/null; then
+            SDL_POOL="pool/${DISTRO}/main/libsdl3"
+            mkdir -p "${SDL_POOL}"
+            rm -f "${SDL_POOL}"/libsdl3-*.deb
+            cp incoming/libsdl3-*.deb "${SDL_POOL}/"
+          fi
 
           # Generate Packages index for each architecture
           for ARCH in amd64 arm64; do
@@ -228,6 +400,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
+          if git diff --cached --quiet; then
+            echo "No repository changes to publish"
+            exit 0
+          fi
           git commit -m "Update ${EMU} ${VERSION} for ${DISTRO}"
           for i in 1 2 3 4 5; do
             git push && break
