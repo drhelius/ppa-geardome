@@ -53,16 +53,16 @@ Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
  SuperGrafx and CD-ROM² software.
 
 Package: gearlynx
-Version: 1.2.14-1~ppa1~noble1
+Version: 1.2.15-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3401
-Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/gearlynx/gearlynx_1.2.14-1~ppa1~noble1_arm64.deb
-Size: 1258284
-MD5sum: e51c54a73cb024d1af55dfef286b2e06
-SHA1: 821e910b1e4f509c6992a55a088e38dc2c40d67d
-SHA256: 442475ef261ccca25ccb87ad07412317a286071a72a3826933daafe54f0b23a7
+Installed-Size: 3529
+Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
+Filename: pool/noble/main/gearlynx/gearlynx_1.2.15-1~ppa1~noble1_arm64.deb
+Size: 1310516
+MD5sum: 22aadaba48a7048e0dbf62692dcf866b
+SHA1: ac0b3662cef19cc14ce2a2c6cb4327a78e8ecc4f
+SHA256: 7b356a6b405278f10cd3a8ae8ed7bbffe8b5e061dd0d7404bb01b8598c4ea742
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
@@ -87,4 +87,36 @@ Homepage: https://github.com/drhelius/Gearsystem
 Description: Sega Master System / Game Gear / SG-1000 emulator
  Gearsystem is a very accurate, cross-platform Sega Master System /
  Game Gear / SG-1000 emulator written in C++.
+
+Package: libsdl3-0
+Version: 3.4.10-1~ppa1~noble1
+Architecture: arm64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
+Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
+Size: 4824726
+MD5sum: 4f3e13863cd5321494081c4edbb39471
+SHA1: 579b512ed98014eda106256a85272a85a0b2b34d
+SHA256: 7a32d059b7d063fd7e49c9bf42af67997703fc3845b78811bed28cccea177589
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Simple DirectMedia Layer 3 runtime library
+ SDL is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware.
+
+Package: libsdl3-dev
+Version: 3.4.10-1~ppa1~noble1
+Architecture: arm64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
+Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
+Size: 445430
+MD5sum: d1891c9196a211fc0c68e7398adec0f2
+SHA1: 10b41024345965384bb39948a0af77fb21aced8d
+SHA256: 0833e8ed68cf6dffaf77ccc98500865e24f031374f741537a28825ef6ac96992
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Simple DirectMedia Layer 3 development files
+ SDL is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware.
 
