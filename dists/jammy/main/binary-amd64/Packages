@@ -53,16 +53,16 @@ Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
  SuperGrafx and CD-ROM² software.
 
 Package: gearlynx
-Version: 1.2.14-1~ppa1~jammy1
+Version: 1.2.15-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3644
-Depends: libc6 (>= 2.34), libstdc++6 (>= 12)
-Filename: pool/jammy/main/gearlynx/gearlynx_1.2.14-1~ppa1~jammy1_amd64.deb
-Size: 1284408
-MD5sum: f6ebee4e409b88d9ad80b0299fe2ec80
-SHA1: a2bf7f25b5c5c5424c9af5351ae75a8bd8a1e7ca
-SHA256: 829191903474620657f65dd9c2ebe709767d67d0f9a703f2bfc87b123516d8e6
+Installed-Size: 3804
+Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
+Filename: pool/jammy/main/gearlynx/gearlynx_1.2.15-1~ppa1~jammy1_amd64.deb
+Size: 1336288
+MD5sum: bb4a37e1c9945ec96709cfdab505f2b2
+SHA1: 5d164fa0d24d16b8c46f67adb13fda7d424fd719
+SHA256: 4b26640d97e832a0449e80e643a80fccac27dd7695ad477fabafa731887cdea1
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
@@ -87,4 +87,36 @@ Homepage: https://github.com/drhelius/Gearsystem
 Description: Sega Master System / Game Gear / SG-1000 emulator
  Gearsystem is a very accurate, cross-platform Sega Master System /
  Game Gear / SG-1000 emulator written in C++.
+
+Package: libsdl3-0
+Version: 3.4.10-1~ppa1~jammy1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
+Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
+Size: 5150646
+MD5sum: 358992aea5478837233d41ce229050b4
+SHA1: d2847a3e12ba1788cd095654c0d83ce8999a3728
+SHA256: 3350e9c209b23c71edae792cf1d2fa51dd9a85102e7085b48925d0e46b5b710a
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: Simple DirectMedia Layer 3 runtime library
+ SDL is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware.
+
+Package: libsdl3-dev
+Version: 3.4.10-1~ppa1~jammy1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
+Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
+Size: 445448
+MD5sum: aed63746627e397a0d655750c9941085
+SHA1: 5c260a12ec3c51979423cafad2d022513a0c0bed
+SHA256: 9e3d928219eef8f8c398dc474f46e9653ce1ec443717716a9c4cb795f698c4c3
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: Simple DirectMedia Layer 3 development files
+ SDL is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware.
 
