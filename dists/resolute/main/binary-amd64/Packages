@@ -59,10 +59,10 @@ Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 3849
 Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
 Filename: pool/resolute/main/gearlynx/gearlynx_1.2.15-1~ppa1~resolute1_amd64.deb
-Size: 1355566
-MD5sum: 4fc0a5cb1494ee0c27556c1d2f4469de
-SHA1: 8131ae1597ddc88e231be09edc803c4d97e87abe
-SHA256: 9cdf3a7493cc6d19195b279342b1a45005a3e7c7d94894a398f40255b6709f74
+Size: 1355552
+MD5sum: 460c1f7d3452cccdf72757265d933a1a
+SHA1: c968fcbfe253e97ff92bb1a59a5681acd521853c
+SHA256: fea157a62b16a09bd5d56976ad9d52f3878361224797f1bf2ba7cf560a802355
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
