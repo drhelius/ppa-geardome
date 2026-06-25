@@ -308,6 +308,9 @@ jobs:
     needs: build
     if: ${{ !cancelled() && needs.build.result != 'failure' }}
     runs-on: ubuntu-latest
+    concurrency:
+      group: ppa-publish
+      cancel-in-progress: false
     permissions:
       contents: write
       pages: write
