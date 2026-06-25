@@ -59,10 +59,10 @@ Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 3804
 Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
 Filename: pool/jammy/main/gearlynx/gearlynx_1.2.15-1~ppa1~jammy1_amd64.deb
-Size: 1336288
-MD5sum: bb4a37e1c9945ec96709cfdab505f2b2
-SHA1: 5d164fa0d24d16b8c46f67adb13fda7d424fd719
-SHA256: 4b26640d97e832a0449e80e643a80fccac27dd7695ad477fabafa731887cdea1
+Size: 1336310
+MD5sum: 2501bf5943a68e440d185be60383693e
+SHA1: 7c14be749659315c52ccdc43360fed66b6e9b34b
+SHA256: 24482e53579d65ee8c323695ccc325f75a7c860bb254f6e311366cca42564df5
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 5150646
-MD5sum: 358992aea5478837233d41ce229050b4
-SHA1: d2847a3e12ba1788cd095654c0d83ce8999a3728
-SHA256: 3350e9c209b23c71edae792cf1d2fa51dd9a85102e7085b48925d0e46b5b710a
+Size: 5150644
+MD5sum: 58655163434c7a867822930f8d80e280
+SHA1: 1b3fd1537ec6bac8de12130e73816e5881ce99d1
+SHA256: f7d8229ee0a73ee0404ed3a6a396ac1039d14cfe25adeda25b308040167eac04
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445448
-MD5sum: aed63746627e397a0d655750c9941085
-SHA1: 5c260a12ec3c51979423cafad2d022513a0c0bed
-SHA256: 9e3d928219eef8f8c398dc474f46e9653ce1ec443717716a9c4cb795f698c4c3
+Size: 445350
+MD5sum: 731256e88d0cec3d3b23a27f47817490
+SHA1: 0424d00c54f5aad64c6c7356771a8b294b798be3
+SHA256: 19680e4b43aa42d943c120146a365c3f558a79db9524467616b95d042e25889d
 Section: libdevel
 Priority: optional
 Multi-Arch: same
