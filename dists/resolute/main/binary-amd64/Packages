@@ -17,16 +17,16 @@ Description: Game Boy / Game Boy Color emulator
  written in C++.
 
 Package: gearcoleco
-Version: 1.6.3-1~ppa1~resolute1
+Version: 1.6.5-1~ppa1~resolute1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3297
+Installed-Size: 3577
 Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
-Filename: pool/resolute/main/gearcoleco/gearcoleco_1.6.3-1~ppa1~resolute1_amd64.deb
-Size: 1140440
-MD5sum: ec9a498938962e95daffe9d5fd921563
-SHA1: 9261e7ba05e46bdfd721bf5ead74b3136d02d104
-SHA256: 5f119da8aadd1e80d9d20bce6fa1caeaaeb00365959182aeb79e31b93bc059ee
+Filename: pool/resolute/main/gearcoleco/gearcoleco_1.6.5-1~ppa1~resolute1_amd64.deb
+Size: 1188220
+MD5sum: cbf0d316689523e7dc230fd61aecaaa8
+SHA1: 4a489986788cd4129cf4ba21f99d3d4213d439d4
+SHA256: 3b0212c7dda7bf59810f989262dcf251334c5dd9b50115d8f98852106b9c60fe
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearcoleco
