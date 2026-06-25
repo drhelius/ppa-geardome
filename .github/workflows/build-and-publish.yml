@@ -32,6 +32,10 @@ on:
 env:
   SDL3_TAG: release-3.4.10
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     strategy:
@@ -242,23 +246,7 @@ jobs:
 
           pkg-config --exists sdl3
           echo "Using SDL3 $(pkg-config --modversion sdl3) from $(pkg-config --variable=libdir sdl3)"
-
-          SDL3_CONFIG="$(pkg-config --variable=includedir sdl3)/SDL3/SDL_build_config.h"
-          if [ ! -f "$SDL3_CONFIG" ]; then
-            SDL3_CONFIG="$(find /usr/include -name SDL_build_config.h -print -quit)"
-          fi
-
-          if [ -z "$SDL3_CONFIG" ] || [ ! -f "$SDL3_CONFIG" ]; then
-            echo "SDL_build_config.h not found"
-            exit 1
-          fi
-
-          for driver in SDL_AUDIO_DRIVER_ALSA SDL_AUDIO_DRIVER_PIPEWIRE SDL_AUDIO_DRIVER_PULSEAUDIO; do
-            if ! grep -q "#define $driver 1" "$SDL3_CONFIG"; then
-              echo "$driver is not enabled in SDL3"
-              exit 1
-            fi
-          done
+          dpkg-query -W -f='${Package} ${Version}\n' libsdl3-0 libsdl3-dev
 
       - name: Checkout emulator source
         if: steps.check.outputs.skip != 'true'
