@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.12-1~ppa1~jammy1
+Version: 1.7.13-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 5084
 Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
-Filename: pool/jammy/main/geargrafx/geargrafx_1.7.12-1~ppa1~jammy1_amd64.deb
-Size: 1596006
-MD5sum: 00206801042d2f27215edbafb48b8297
-SHA1: 68963f1f161b318aacb49f696960f22253272e93
-SHA256: 81a9c643b684233e2ee8cc953455db7a89e00bf04c9ca2b7f301dc67be83588b
+Filename: pool/jammy/main/geargrafx/geargrafx_1.7.13-1~ppa1~jammy1_amd64.deb
+Size: 1596900
+MD5sum: ebc267a71312d54423c4e87760b8ce5a
+SHA1: 17b9263cd4044e6fec9e9d75397b51bfdbf44949
+SHA256: 22073c31b7b5d5e9fc65160ac150f30c38318f10a6db0fd66b032162f9c7d38e
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 5150646
-MD5sum: 444e08a37c8b8320290a5e55d9dea104
-SHA1: b6f34cc8960cd82efb2b09bbadeb957de4718ea4
-SHA256: dfa57accaa2c7bdfeb6dd560290163bd7ceec63b8384c9a58b7110e4e9c9aa9c
+Size: 5150656
+MD5sum: 7a0b15de0483ed216f69f22675141b50
+SHA1: 0aba55ec03876859850c7a028ac97a54e0f446ec
+SHA256: e8e83b89f36a0e8a5611a04f7e913dd8fef779d507d18658ce2d8d744b6c935a
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445402
-MD5sum: c65ae97f7d858363586b8c7355901d3c
-SHA1: 56d5fee93538989bb18e14ee559334a286028540
-SHA256: e847a2338a20062f8cdd1704e0471732f00487953db92220582cf8333dd05e87
+Size: 445554
+MD5sum: 847897db59f190fe7722d76d373bafba
+SHA1: 29ae5703e1e2fbf3efb3168ea649d7f05fe29a86
+SHA256: acb799f375e59966d2139c862a629653c87b6ee63aa9001781dc33f0a5a1d72a
 Section: libdevel
 Priority: optional
 Multi-Arch: same
