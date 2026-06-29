@@ -71,16 +71,16 @@ Description: Atari Lynx emulator
  written in C++.
 
 Package: gearsystem
-Version: 3.9.11-1~ppa1~jammy1
+Version: 3.9.12-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3525
+Installed-Size: 3530
 Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
-Filename: pool/jammy/main/gearsystem/gearsystem_3.9.11-1~ppa1~jammy1_amd64.deb
-Size: 1218566
-MD5sum: 1399d4f26b2bd065b86ee70b90e6c270
-SHA1: 1e35cc3924c83be967a6bd4e2abc66f2269ee3da
-SHA256: fe99b18e15c9cc1f9e2d0ff01e3a30f394ce78ca083e7d39555c1e417d0f6552
+Filename: pool/jammy/main/gearsystem/gearsystem_3.9.12-1~ppa1~jammy1_amd64.deb
+Size: 1218842
+MD5sum: ed6e0159ce260e5f862bffb2bf857dd1
+SHA1: 6babbeea707955420f05fdf6c633dff513f226f5
+SHA256: 27d4a1c007cd43911bd10474dcad90a2ed911d3c219457562270737c6e46194b
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearsystem
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 5150646
-MD5sum: fbeb19d3205d59dbb8a88f57c52b6cc9
-SHA1: 6cc029adf6da29515ea96b500af8ed833ae4717b
-SHA256: 762e65c3726644a1c42e53d9247ba3d15063d4370cef90cfcd0ac291aa498f13
+Size: 5150636
+MD5sum: 90e84591e3488521b822b8770019f9e7
+SHA1: d7774e7706ff5e9bd04c74e6d4133bdffa8d30f8
+SHA256: 620423c63cd17ec1c9aeb9a045c9b20d26d0b75a7c956ebbcabe079784f988b6
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445538
-MD5sum: a66f923ef23b3779b9e4f4803806ed1d
-SHA1: 832d5b5c4b298b1bbb1133b6078f8c9add589016
-SHA256: 2c64707dadef705cec26d5859e867fd9cccc01e3ecd86866da81d116cb338f5e
+Size: 445494
+MD5sum: 6ffad548ae03ea0c5e0ab2f5bd45c366
+SHA1: aa1d6b847d4693f4bc98e2a3733d0a3199b037ed
+SHA256: 182b56d1f92edacc853f0b1e796485364f25a3e73f4609dd7d52321f51b39e33
 Section: libdevel
 Priority: optional
 Multi-Arch: same
