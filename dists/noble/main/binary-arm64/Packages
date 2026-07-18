@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.14-1~ppa1~noble1
+Version: 1.7.15-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 4502
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.7.14-1~ppa1~noble1_arm64.deb
-Size: 1558246
-MD5sum: 6e8541b59b093746779f83d09f46e092
-SHA1: 0a202f2312eacd3ddd7feed9d5f238ba6c4261a6
-SHA256: 15390cfec024b87f3a0c3fa80a1b65eaa8bb84a80c23b8cffc30b180432c1039
+Filename: pool/noble/main/geargrafx/geargrafx_1.7.15-1~ppa1~noble1_arm64.deb
+Size: 1573418
+MD5sum: e5e8a2ed6205fd4a3ed15df3f6ef9c33
+SHA1: aa6df26d73492f391e2d038042da2a42df558f38
+SHA256: 2ede4fdec26a523a8fecac478dd60614bb38af11135190e785db824417fe9417
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824772
-MD5sum: c137d971130426316286c2f15ad22cdc
-SHA1: b23ad253e46c465fedd204479595cd18028a953c
-SHA256: 0d012844353230b70ba40f691a66e18175ad5a550431ceea5ad6d1a4a71e5ab7
+Size: 4824768
+MD5sum: 8b5c2f56602ed6cd0643b022dd7f153b
+SHA1: 7805000f9481712e008387ef4ec37a801666c30f
+SHA256: 7b30e28007560d7cbc7fbad236569137eeed29dd2b9c0eed4ed76d050873211c
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445146
-MD5sum: ca83ca79415544e551b15f98e766e888
-SHA1: 62bd63660ad9cca21ed309773505ce87960b4b54
-SHA256: 099c78128c440cbe88d63aa98bb97b1bca31ca89e2b2ef0f395075f5480832bc
+Size: 445100
+MD5sum: 5ad8be8c0efe848502d8c3c522200c93
+SHA1: 9c12903d50d5040cca64f3e115b938559e728c5c
+SHA256: 8a69ea7c364e0e37029084b6606815d553313ed86621e17b808bc57ca4a63874
 Section: libdevel
 Priority: optional
 Multi-Arch: same
