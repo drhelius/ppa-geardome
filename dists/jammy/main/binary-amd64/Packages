@@ -71,16 +71,16 @@ Description: Atari Lynx emulator
  written in C++.
 
 Package: gearsystem
-Version: 3.9.12-1~ppa1~jammy1
+Version: 3.9.14-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3530
+Installed-Size: 3662
 Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
-Filename: pool/jammy/main/gearsystem/gearsystem_3.9.12-1~ppa1~jammy1_amd64.deb
-Size: 1218842
-MD5sum: ed6e0159ce260e5f862bffb2bf857dd1
-SHA1: 6babbeea707955420f05fdf6c633dff513f226f5
-SHA256: 27d4a1c007cd43911bd10474dcad90a2ed911d3c219457562270737c6e46194b
+Filename: pool/jammy/main/gearsystem/gearsystem_3.9.14-1~ppa1~jammy1_amd64.deb
+Size: 1246236
+MD5sum: a2b89780b04574663475b983202f5e72
+SHA1: 69c5de17b2064d8c4ff5885b4d048c970036831f
+SHA256: 144c00f8f00a547ea3bc00542d6a58ce154377b7dbbc5987e9eb56c95243883f
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearsystem
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 5150798
-MD5sum: 5fa0d8dc475c693889ade4b35ae83508
-SHA1: 034dec276702e8d475efc6033640a8eca8fbe101
-SHA256: 23824f80d6f136c04f8c4ed9c0ce677e0197298349410653b34c5dc8ec5c8b63
+Size: 5150644
+MD5sum: 4e46a24120841d02ee17872714c9d83a
+SHA1: 557a8a4e2e1711531b6c07f60757904503ef1e0b
+SHA256: ba8cb3bdeba94a9922fc78bdea0011ee28ceb77913dad56387a0f33c3f6604ab
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445392
-MD5sum: 4eada023bc4a6cae1eaca9a77903c3b3
-SHA1: e5183c4b3cbbc938487ceaf96387f666339d3fe7
-SHA256: 58a31700ea3647542d1a721eaa66437326a86dee3961cbed69c76c2f4224c28d
+Size: 445328
+MD5sum: e3b74e2fdd2b0a109690106137d78c25
+SHA1: 2c431ca25cedbe77c3df15b413c6d4dd58a979c5
+SHA256: 3a47f7b40080c22e8bac0fa1809cd7502a1de426e3e072b54b68176276d17a5b
 Section: libdevel
 Priority: optional
 Multi-Arch: same
