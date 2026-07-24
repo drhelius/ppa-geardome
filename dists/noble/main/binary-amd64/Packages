@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.15-1~ppa1~noble1
+Version: 1.7.16-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 5202
+Installed-Size: 5302
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.7.15-1~ppa1~noble1_amd64.deb
-Size: 1655332
-MD5sum: c08162cb12c3ea63d6f70c74da61d267
-SHA1: dd4dc2bb58e293f6be029a4d759c49e7a2b7ecb4
-SHA256: d3a1dc5b3720e56d4b3362189b32154772a49021dfaf9901f06aaf468b3e8dc7
+Filename: pool/noble/main/geargrafx/geargrafx_1.7.16-1~ppa1~noble1_amd64.deb
+Size: 1673306
+MD5sum: 8f513843af618f51fcc6d65ca1063a4b
+SHA1: ad4bc67a57f69afcde9cb10cdcdccb72d9cb800f
+SHA256: 04b84eb90b90cfc23325b97ada274c6a5f90277a5a027cca4a8ff8013c56a1f4
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181192
-MD5sum: 1f6a53dcc48b5e29d04ff97316fe9aa0
-SHA1: 370fb3837c9d6bc03b2d3112f2e7888e52c5c3d2
-SHA256: b60e7b6eef30b90af462c5bd25df5f338476f0838724508e16b5f407e33e203a
+Size: 5181278
+MD5sum: 2ee4f796eb179045c1d5df30aa665c75
+SHA1: afd1c2d5fd4655fa67c3e13c5fe001eefb5e7b28
+SHA256: f10eb07478776d3bbdbb0f23c4f874dc61b5bd0c4f4bddc40f0d5cfff9dacdba
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445282
-MD5sum: e8d6d86b74391d78e90cf04794e84364
-SHA1: ffd70d4cf92d3dc23e32ab73d021450ebb0f74a4
-SHA256: 95a628d10d03c535d6c39b862f20bb3b31b05ce57841b460c1105a83900bfceb
+Size: 445188
+MD5sum: 522cf20a9400aa7c103f368e25fb300d
+SHA1: 3052ccf9d26963cc4a52d4a099efe9d1af877b6b
+SHA256: 76c678e3eb7283c5e1f91125f284a4245e3953054893eedc6f4b25dd7783f519
 Section: libdevel
 Priority: optional
 Multi-Arch: same
