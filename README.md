@@ -11,6 +11,7 @@ This is the official APT repository (PPA) for [DrHelius](https://github.com/drhe
 | [Gearcoleco](https://github.com/drhelius/Gearcoleco) | ColecoVision | `sudo apt install gearcoleco` |
 | [Geargrafx](https://github.com/drhelius/Geargrafx) | TurboGrafx-16 / PC Engine / SuperGrafx / CD-ROM² | `sudo apt install geargrafx` |
 | [Gearlynx](https://github.com/drhelius/Gearlynx) | Atari Lynx | `sudo apt install gearlynx` |
+| [Geartowns](https://github.com/drhelius/Geartowns) | FM Towns | `sudo apt install geartowns` |
 
 ## Installation
 
@@ -21,11 +22,12 @@ curl -fsSL https://drhelius.github.io/ppa-geardome/geardome-ppa.gpg | \
   sudo tee /usr/share/keyrings/geardome-archive-keyring.gpg > /dev/null
 
 echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/geardome-archive-keyring.gpg] \
-  https://drhelius.github.io/ppa-geardome noble main" | \
+  https://drhelius.github.io/ppa-geardome resolute main" | \
   sudo tee /etc/apt/sources.list.d/geardome.list
 ```
 
-> **Note:** Replace `noble` with your Ubuntu codename: `resolute` (26.04), `noble` (24.04), or `jammy` (22.04).
+> **Note:** Replace `resolute` with your Ubuntu codename: `resolute` (26.04), `noble` (24.04), or `jammy` (22.04).
+> Jammy packages are available for amd64 only.
 
 Then install any emulator:
 
@@ -36,6 +38,7 @@ sudo apt install gearsystem
 sudo apt install gearcoleco
 sudo apt install geargrafx
 sudo apt install gearlynx
+sudo apt install geartowns
 ```
 
 ## Updating
