@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.16-1~ppa1~noble1
+Version: 1.7.17-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 4630
+Installed-Size: 4635
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.7.16-1~ppa1~noble1_arm64.deb
-Size: 1589604
-MD5sum: 28d5b2dcce37235df986c6d4c61bc0ed
-SHA1: 8ec5b7b970212a99622a46c2c330b93272808fd2
-SHA256: b62213ae27fc27a5f09c1b1c8c087dd0be0dee82b389d4724875ab81799b59ae
+Filename: pool/noble/main/geargrafx/geargrafx_1.7.17-1~ppa1~noble1_arm64.deb
+Size: 1592134
+MD5sum: 23d72ce73888bf13223461ad69d8d920
+SHA1: 7a6d53d9a3577d6ea8d017c9f5b9426a1f5265c6
+SHA256: 9e8f80b1ab30eff86060b2daa84f6009c7b806b41056f2af0740f95a4e7890f1
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824920
-MD5sum: 26d06e915d6a519a7c0a9d35930814d4
-SHA1: 31e8ddf2d4e71af234c8d8fa252c3f3e73cc46b5
-SHA256: 75f5b5db766522cf884d40390c36a9e426166eb281867433f3f6cd92f05ec92d
+Size: 4838374
+MD5sum: 0317149175a2de9f91c5eae9ca8d468e
+SHA1: 9edc506cebaf5c0c297ea7d4ac94d03b7c9a4d56
+SHA256: 35d86a9874e4928bfa100c16bd07bbe2a99004d1b027ab3ec7f415c7f5992da1
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445170
-MD5sum: b8e502f40f915d453f1bd5d967c76015
-SHA1: 3db9f916d4d6ed104965e39f0a0be6d7acb0e2a1
-SHA256: c17942854e2207b010fa0f0ebe34b0b1c0fc5dd30fa165d072fc011ecc7030a4
+Size: 445154
+MD5sum: d6ccfbc097adcafb3e0759f616d9b2c0
+SHA1: 37fd054f46f45152bb25a7051fed4a5ea094889b
+SHA256: 3610e40718ab0eb647fea7c2ca8488e720607590c0274767562998eff3cbf6a3
 Section: libdevel
 Priority: optional
 Multi-Arch: same
