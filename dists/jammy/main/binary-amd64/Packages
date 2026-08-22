@@ -71,16 +71,16 @@ Description: Atari Lynx emulator
  written in C++.
 
 Package: gearsystem
-Version: 3.9.14-1~ppa1~jammy1
+Version: 3.9.16-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3662
+Installed-Size: 3724
 Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
-Filename: pool/jammy/main/gearsystem/gearsystem_3.9.14-1~ppa1~jammy1_amd64.deb
-Size: 1246236
-MD5sum: a2b89780b04574663475b983202f5e72
-SHA1: 69c5de17b2064d8c4ff5885b4d048c970036831f
-SHA256: 144c00f8f00a547ea3bc00542d6a58ce154377b7dbbc5987e9eb56c95243883f
+Filename: pool/jammy/main/gearsystem/gearsystem_3.9.16-1~ppa1~jammy1_amd64.deb
+Size: 1268908
+MD5sum: 278754f0df7547a61ec99d11b441ed08
+SHA1: a79881e17f0f9f5b9ba318ac7f00528bd31adadd
+SHA256: 4cef42fc6647ff3db8e3034b5e79b5956321d67e5cc436152979df6f90ecb019
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearsystem
@@ -95,9 +95,9 @@ Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
 Size: 5150644
-MD5sum: e58278d98d3f274e65e9f30d004000c2
-SHA1: be17a11a8860d976b2166c5fcfc9f20576bc3b8b
-SHA256: c951df592e154fec2461f77afb5f8bd3b4d5eb615ab54a4e37c345ac606de280
+MD5sum: 01ec8e0b3aade04022ee40a220096417
+SHA1: 2096f09355d5cf9bd9bcb31a00fed88ec6be2b88
+SHA256: 024df57fa56f62c72ae53518af7a8641f813782e7de1d80b3c5757da2b3ce811
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445452
-MD5sum: 416c2e4fafa5bf734e1e2ef9036cfbfc
-SHA1: bb13830f6f50b8d8a2d51832ffbc8f3dd23055f9
-SHA256: e92f5ffa7e86fc5d75cea3e6bc33bfe65c1e42cc22772d339e9241f18f636966
+Size: 445442
+MD5sum: 5a5b0dbfceb0f089bd8409405fba3010
+SHA1: bdbe3f3a613a6e6481f8c68fc9d3d67cc2b84d0b
+SHA256: 2e11a21e3b8d7cc68e3c32eef1f62e2f2a92e13db879b42e17d0c109efb73171
 Section: libdevel
 Priority: optional
 Multi-Arch: same
