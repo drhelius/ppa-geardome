@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.17-1~ppa1~noble1
+Version: 1.7.18-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 4635
+Installed-Size: 4706
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.7.17-1~ppa1~noble1_arm64.deb
-Size: 1592134
-MD5sum: 23d72ce73888bf13223461ad69d8d920
-SHA1: 7a6d53d9a3577d6ea8d017c9f5b9426a1f5265c6
-SHA256: 9e8f80b1ab30eff86060b2daa84f6009c7b806b41056f2af0740f95a4e7890f1
+Filename: pool/noble/main/geargrafx/geargrafx_1.7.18-1~ppa1~noble1_arm64.deb
+Size: 1615658
+MD5sum: 5261984503fe97630962b72a0af376fb
+SHA1: c748bca5d5e2d28cd4032b4061f6248837a293a0
+SHA256: 4b6982ecd9a257a076fe7edb2295a0242ae931c8c7701d752f7d8650ef93d2ac
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824756
-MD5sum: 98c6658b2ff753da852417dbb0ccfbe7
-SHA1: 45b9df8535d3532d359fdd500aaed4a83f34b327
-SHA256: 0cfe84062cf0b430ba9dcea22860f7b79afbbab56051598d38572edf02e44cb9
+Size: 4824730
+MD5sum: 5babe096a3539f6d287f0259f9dfe5fa
+SHA1: c8a3f188a4236b34139cc05dd6b3e3e9524a80b2
+SHA256: 1325e375b19a247f6599e8b52f0efa6593576e721ce63ab22c827f9013cbce04
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445204
-MD5sum: b6d1709e1037f20184ddbe99a0eec8bb
-SHA1: 4dbcf81b09a21d774c47776f37a07356e23250b4
-SHA256: 0c697ad2fb6a1dd383e42e840a37ba2df27e687b11c7f3b22e439bd60c11b240
+Size: 445162
+MD5sum: ef6ad075d05a206930cba5acaf646c0c
+SHA1: 21d0adfc620b18b0899bc8a351fe2f6bd8de5dc7
+SHA256: 39c71a0b8d30975589896cf6cbb91df39742e4938cb12c3964a121567184bf3e
 Section: libdevel
 Priority: optional
 Multi-Arch: same
