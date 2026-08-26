@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.18-1~ppa1~noble1
+Version: 1.7.19-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 4706
+Installed-Size: 4834
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.7.18-1~ppa1~noble1_arm64.deb
-Size: 1615658
-MD5sum: 5261984503fe97630962b72a0af376fb
-SHA1: c748bca5d5e2d28cd4032b4061f6248837a293a0
-SHA256: 4b6982ecd9a257a076fe7edb2295a0242ae931c8c7701d752f7d8650ef93d2ac
+Filename: pool/noble/main/geargrafx/geargrafx_1.7.19-1~ppa1~noble1_arm64.deb
+Size: 1661522
+MD5sum: 29890e2682c55f2e6d19cb2bc822b4f1
+SHA1: 0386cdd85406c082115bd88b75f95c3b9c9febe5
+SHA256: c16633a0f407e0d3621f31287fd6da93acff2e4cf6b2b088785efe56c4cff8fd
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824764
-MD5sum: 1c61efa25ebce5451b4e3475c129fa3f
-SHA1: b217b0cb113f27e0b039e77389e143a40301d988
-SHA256: 07b5c7ab1e49677de01c1594279b0633dc4d18bd1d9db1032da232fc1425902f
+Size: 4824742
+MD5sum: 7b748a8a9081ef6b5ebbce6d2ccdcedf
+SHA1: 0372b222b776a467f6ee5221d0f77a5f2b2dc941
+SHA256: 5fe3792d68be96e41231185e54aa2f967a3dedc73e9e6ec226f335fe4eef76b4
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445124
-MD5sum: 06d8ec8a3a0285fd62e31c33f981a658
-SHA1: 47a71804f1f5c2ea6418e56d29529f356bd25e6f
-SHA256: 33d1a2d7a40e2ecb2e04db9c387b1a2914b054fd07de9de7c973287b052b1861
+Size: 445126
+MD5sum: eeb322abfd564472ce7a78b410a9ba42
+SHA1: f332a6b36e0ce7c2e58007ace181249185da8d63
+SHA256: 4b24a8e3c9b2bed9656f0171c2a953c608c273e2fdb3d97ecf8accab536c51d9
 Section: libdevel
 Priority: optional
 Multi-Arch: same
