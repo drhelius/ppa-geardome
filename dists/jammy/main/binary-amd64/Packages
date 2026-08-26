@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.18-1~ppa1~jammy1
+Version: 1.7.19-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 5361
+Installed-Size: 5537
 Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
-Filename: pool/jammy/main/geargrafx/geargrafx_1.7.18-1~ppa1~jammy1_amd64.deb
-Size: 1675498
-MD5sum: 76e2b82dd4387a16beb9e15f87a42178
-SHA1: 62afc3e76323eb2d23704652858a2bd9e9432679
-SHA256: 668de31d7b3fa9f000448348c49d8955e6b0e12640b6ff6a70edb02ec99289cc
+Filename: pool/jammy/main/geargrafx/geargrafx_1.7.19-1~ppa1~jammy1_amd64.deb
+Size: 1729814
+MD5sum: a5fc9458b41782e733beed7205a823ba
+SHA1: 4564119c73e96f86daff20ecc5840c65a7e8a5b3
+SHA256: c40419cb53b5da7e4f3ec6ee36b29bb01f21875764154a8ecae098fe573b81dd
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 5150646
-MD5sum: c7ad5902fcdb266b07e157c0d3234181
-SHA1: 905f938a8fe4263b91f971a38de157fc45fef5c6
-SHA256: 9e3811acb8132ad6efa7752cc1e55f8c20645445fa3ebfe60d4ab7607ece24d8
+Size: 5150652
+MD5sum: f3378a92e107fb5a93e95f62e3fa6e1e
+SHA1: becc3e77ace87ff63c588494224712a20abebcc0
+SHA256: f8829c46cadd2961b9b16717cdaada3dd5b3f8ea2bb4bdeab3706a553834a1c0
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445308
-MD5sum: 02a8bee9fa675f95cf17b224b391e06c
-SHA1: fdf72b06ac55fd664a67ce7e664856adaec1a28e
-SHA256: dbec1b303d1de4040422bfe801f945ec40283ebaa27c99ffeedf3409abed2102
+Size: 445364
+MD5sum: 2f489bea9983a600c92c24a43555a2ef
+SHA1: b0797fe73c04112353772fc46e7f816a2456e5e0
+SHA256: 217dfe6d963a008fad711bcea8a8ae4e7ea47293d01bd727c50d80f270cc5caa
 Section: libdevel
 Priority: optional
 Multi-Arch: same
