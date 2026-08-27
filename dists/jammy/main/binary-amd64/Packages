@@ -71,16 +71,16 @@ Description: Atari Lynx emulator
  written in C++.
 
 Package: gearsystem
-Version: 3.9.16-1~ppa1~jammy1
+Version: 3.9.17-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3724
+Installed-Size: 3804
 Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
-Filename: pool/jammy/main/gearsystem/gearsystem_3.9.16-1~ppa1~jammy1_amd64.deb
-Size: 1268908
-MD5sum: 278754f0df7547a61ec99d11b441ed08
-SHA1: a79881e17f0f9f5b9ba318ac7f00528bd31adadd
-SHA256: 4cef42fc6647ff3db8e3034b5e79b5956321d67e5cc436152979df6f90ecb019
+Filename: pool/jammy/main/gearsystem/gearsystem_3.9.17-1~ppa1~jammy1_amd64.deb
+Size: 1301158
+MD5sum: e51e1ba7e2afc4892590507d3dde0fe2
+SHA1: 09cf8165a7d9651b4fc1b9fd80aaad8bf9c3e176
+SHA256: 518880d159b8c3ad9eda77c77f2b882dec85115828e5e485f660cc0a08491842
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearsystem
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 5150642
-MD5sum: bb5a83f10b90e37e73788adfc14e3cdb
-SHA1: eabfece5d99514857c3170d98aae5313e30c34db
-SHA256: bd77a375c6d90420e0dabed6e053c8fe3bd5c0a4b0dbc1d5900c37af352b5eab
+Size: 5150632
+MD5sum: a763c78c019f6aa26c0658e2165740ca
+SHA1: 5df2fc8afc11762b3452eb0e0823103c057e48b8
+SHA256: d550b886eb1e80fbcb85368512308430055ee673f3109a8cb6dbb2c12c712415
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445474
-MD5sum: d51123f34818dbea8f222ba83f345348
-SHA1: f615aa7e948e5075d51e4504c0f171cda2725da6
-SHA256: eb5f50ee63167d034b52d3ec42e9d64f2c8136f97e14395e2e6038eb43d8a673
+Size: 445468
+MD5sum: aae03f19426c91249a4b6b7a7c6bad69
+SHA1: 37884052e57d4d3d273c49745b0bd874ef4ac6c3
+SHA256: 8c83d29011f99666fb0089a2c89e58aa80fd7518527f1fff34ea3f6b0041afa7
 Section: libdevel
 Priority: optional
 Multi-Arch: same
