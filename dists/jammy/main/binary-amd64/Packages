@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.19-1~ppa1~jammy1
+Version: 1.7.21-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 5537
+Installed-Size: 5708
 Depends: libc6 (>= 2.34), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
-Filename: pool/jammy/main/geargrafx/geargrafx_1.7.19-1~ppa1~jammy1_amd64.deb
-Size: 1729814
-MD5sum: a5fc9458b41782e733beed7205a823ba
-SHA1: 4564119c73e96f86daff20ecc5840c65a7e8a5b3
-SHA256: c40419cb53b5da7e4f3ec6ee36b29bb01f21875764154a8ecae098fe573b81dd
+Filename: pool/jammy/main/geargrafx/geargrafx_1.7.21-1~ppa1~jammy1_amd64.deb
+Size: 1821606
+MD5sum: 81188d0721555a3672803141270d885a
+SHA1: 7bdcd14f693b68e9da82143d97171beeecdaaacf
+SHA256: 3e545d380ecb2aa8e9a46bfb134de903aef030e4ecc8248010a1b22d1774be32
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 5150662
-MD5sum: e074de61089fbe92ad338fd72750ef28
-SHA1: 429373353d213a7222196ff0731e0929f58b9d1c
-SHA256: b21a07ccfe8be42f4615ed4ff37ca58c1df5a37f536ff2654ae1ce8cea1a2834
+Size: 5150648
+MD5sum: 5e25e102a9c294e337b4c67e43c23f6b
+SHA1: e85dc0387544bf6655ff56c57284245fb6c4dc0c
+SHA256: 3394ce473163016e318a0bf8bc541ee76807839f19978b12dc538cdbfc989015
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445396
-MD5sum: c69a019b1da4efb04738dd3a3e830526
-SHA1: 199603593570d5ba7797aa4b105a432782e90c2e
-SHA256: 86f7179f95c4c093344b8a74105846d95396dd077efd44a1c50727d3198d246a
+Size: 445444
+MD5sum: da1486d4df19b9742a0e2b30ed5875e2
+SHA1: df8a19ae53264fea2e25608304a6e6da631255e6
+SHA256: f95948adfa164bf90876774ee35f3347b7f361a2f952aeefc57c3405b4be4767
 Section: libdevel
 Priority: optional
 Multi-Arch: same
