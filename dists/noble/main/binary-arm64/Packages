@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.7.19-1~ppa1~noble1
+Version: 1.7.21-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 4834
+Installed-Size: 4965
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.7.19-1~ppa1~noble1_arm64.deb
-Size: 1661522
-MD5sum: 29890e2682c55f2e6d19cb2bc822b4f1
-SHA1: 0386cdd85406c082115bd88b75f95c3b9c9febe5
-SHA256: c16633a0f407e0d3621f31287fd6da93acff2e4cf6b2b088785efe56c4cff8fd
+Filename: pool/noble/main/geargrafx/geargrafx_1.7.21-1~ppa1~noble1_arm64.deb
+Size: 1754056
+MD5sum: 01766f7b2522feae9ddbf55575ffe429
+SHA1: 5303dcf53e360dc6a792e5c9edf392cf99ffa966
+SHA256: 579d9120929babf77b18e6f9c64306cf6f6791fefe2704e8daafc65ec9209c87
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -94,10 +94,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4825492
-MD5sum: 443f64b90e25ac29453fcf4d5190ebe3
-SHA1: 0cee1f820368e05ae6b0b55da9a83fb48de06439
-SHA256: 1dc169f55877f71e49de47dc18420c42319c6b4ed8099a45514d3b5695c6c5bc
+Size: 4824758
+MD5sum: 46bf8a1b0099fade91ca28c67423225b
+SHA1: 787ecef5e02aa162b8259bb32abe5cfc221fd81b
+SHA256: fe69daa83917b49cbb7917a2e900d9a28f04ad31f45c1983f72551c324ed3c62
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445270
-MD5sum: de7ab1ed9d00df42a082796fe055d445
-SHA1: 2faa57428356d448299ce91f7c8d49c70d9a5457
-SHA256: 1bf19027fd71c9079967726f042333d44cac23fac4c91f64602fa969c1dc436d
+Size: 445086
+MD5sum: ca2baad9845c5014d4484898ba431793
+SHA1: 702452c9d2b19bac9241b9426ead869ddfc8586c
+SHA256: 3afc4e5d2004823a579c98fd3ccdbd762c6f54be21fbf072e02b44065bbd92eb
 Section: libdevel
 Priority: optional
 Multi-Arch: same
