@@ -53,16 +53,16 @@ Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
  SuperGrafx and CD-ROM² software.
 
 Package: gearlynx
-Version: 1.2.31-1~ppa1~noble1
+Version: 1.2.32-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 4412
+Installed-Size: 4438
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.4), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/gearlynx/gearlynx_1.2.31-1~ppa1~noble1_amd64.deb
-Size: 1512006
-MD5sum: d0f4fb5dd36f9cd87d8a0e626d703b3d
-SHA1: 933df3284efc69017679a64e9b6ec0f56de8bed5
-SHA256: a388c63f584cd499353b7b7925f31bdf6c0c7b1b29754a6e65a89fbbde4a77bd
+Filename: pool/noble/main/gearlynx/gearlynx_1.2.32-1~ppa1~noble1_amd64.deb
+Size: 1525030
+MD5sum: 48a37583ab996512d04b5e46489a509c
+SHA1: 35f87a14304089b906de3e0e74ab7c227ce46bd8
+SHA256: c9fa252d3bff8108b9ba2b01c53d5fa3d29bb3f337b474cdd578d54fd37bc4fe
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181238
-MD5sum: 4a9ba84d1e8e8286765a06f24c5f7401
-SHA1: 057f66ea0823091a1bba4305283a8a0715168e0c
-SHA256: a76f7ee1523e747e5116f16aa28d434185290dda881eb517962ee08f6cb01f96
+Size: 5181030
+MD5sum: da7b6b86fdd805d9b620e35e9b6634e7
+SHA1: 91aaad90ac1e80d21cd9a6522a43fb71cbd717b0
+SHA256: ae8caa0b5be78a02b404a8cde8d5732440de2cc89253a9b3e9c3eb1d125093c2
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445122
-MD5sum: 0b128a9396f5293e36c564d50450dc6b
-SHA1: b0d3d513e4739694978ef1870ae40d68be522e2d
-SHA256: 00c38514a3b6656c634257a11cff1745458a4635afccd9d36e775635615d0538
+Size: 445048
+MD5sum: 20bc1827fff7846d9b4b69a6fd06cb4b
+SHA1: abec78cc28d036366e102d7d178e2e3c275695da
+SHA256: 345193d4cea85006b7e44d3c4930c7429ed23e510b3d92b23159ee299642d05d
 Section: libdevel
 Priority: optional
 Multi-Arch: same
