@@ -53,16 +53,16 @@ Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
  SuperGrafx and CD-ROM² software.
 
 Package: gearlynx
-Version: 1.2.31-1~ppa1~jammy1
+Version: 1.2.32-1~ppa1~jammy1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 4400
+Installed-Size: 4426
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.4), libsdl3-0 (>= 3.4.10-1~ppa1~jammy1), libstdc++6 (>= 12)
-Filename: pool/jammy/main/gearlynx/gearlynx_1.2.31-1~ppa1~jammy1_amd64.deb
-Size: 1475498
-MD5sum: 7a833dac6cb8949a5efb46719f9d5a2d
-SHA1: 7e76fecba118a89955bb3d7f49f7f0a6c9534827
-SHA256: 98631908da0e6828e12729ba3ec2d11b6745ede2ca47716b832bbb75f1859967
+Filename: pool/jammy/main/gearlynx/gearlynx_1.2.32-1~ppa1~jammy1_amd64.deb
+Size: 1484318
+MD5sum: 35fef3a5790161fe7157c1982f956dc3
+SHA1: f4226279c0de674ea24dbe2e027cf9003647be9b
+SHA256: b6186e2e7e2a67f850da7643eadc49c567828dd9f09a9ccc32f7c0e7cbeb4cb1
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2, libpulse0, libpipewire-0.3-0
 Filename: pool/jammy/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 5150676
-MD5sum: 4a39395c096cce5e5a90f937cade854e
-SHA1: 8b4fcfb0b396d195ba5966655b35c4340eeaaf92
-SHA256: 63beacdbbc75f3977a4ed899598bc9c680f642ddd9db02dd777cc852cd04a69c
+Size: 5150640
+MD5sum: 4c290c28a764ffb2a0c552ad7a0c6675
+SHA1: a7515cc49001de96019537113fd2c2851804ab86
+SHA256: 5cbda2415c6192a4d5e947b4026541245d7516a425ad43d39ac68aa11c655a94
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~jammy1), pkgconf
 Filename: pool/jammy/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~jammy1_amd64.deb
-Size: 445330
-MD5sum: cbaa0bdbcf3beb0ee7e8958594b25413
-SHA1: 786210c4ee875dc4353b78ead95516d28136ee95
-SHA256: 2f5d76bdf1f549fb56a2b1ee9b62ce6c239602899a6f0b562f7b298b19f3a875
+Size: 445466
+MD5sum: 688f7efb685c66d4a9bc23731ab2f9a6
+SHA1: 2cdf0b86d078a22d2f7e781edeb86ebdc8320369
+SHA256: 8dc67795f2fbfe29c3c460d22be8cf7c5a7aa56617ee06db6a77824bedf499cb
 Section: libdevel
 Priority: optional
 Multi-Arch: same
