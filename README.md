@@ -26,8 +26,7 @@ echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/geardome-archive-keyri
   sudo tee /etc/apt/sources.list.d/geardome.list
 ```
 
-> **Note:** Replace `resolute` with your Ubuntu codename: `resolute` (26.04), `noble` (24.04), or `jammy` (22.04).
-> Jammy packages are available for amd64 only.
+> **Note:** Replace `resolute` with your Ubuntu codename: `resolute` (26.04) or `noble` (24.04).
 
 Then install any emulator:
 

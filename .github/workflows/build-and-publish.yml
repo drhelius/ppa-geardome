@@ -25,7 +25,6 @@ on:
         options:
           - resolute
           - noble
-          - jammy
 
   repository_dispatch:
     types: [build-package]
@@ -53,20 +52,8 @@ jobs:
     env:
       DEBIAN_FRONTEND: noninteractive
     steps:
-      - name: Check if build is needed
-        id: check
-        run: |
-          DISTRO="${{ inputs.distro || github.event.client_payload.distro }}"
-          ARCH="${{ matrix.arch }}"
-          if [ "$ARCH" = "arm64" ] && [ "$DISTRO" = "jammy" ]; then
-            echo "skip=true" >> $GITHUB_OUTPUT
-          else
-            echo "skip=false" >> $GITHUB_OUTPUT
-          fi
-
       - name: Resolve inputs
         id: resolve
-        if: steps.check.outputs.skip != 'true'
         run: |
           EMU="${{ inputs.emulator || github.event.client_payload.emulator }}"
           VERSION="${{ inputs.version || github.event.client_payload.version }}"
@@ -89,10 +76,6 @@ jobs:
               echo "BUILD_SDL3_PACKAGE=1" >> $GITHUB_ENV
               echo "SDL3_RUNTIME_DEPS=libasound2t64, libpulse0, libpipewire-0.3-0t64" >> $GITHUB_ENV
               ;;
-            jammy)
-              echo "BUILD_SDL3_PACKAGE=1" >> $GITHUB_ENV
-              echo "SDL3_RUNTIME_DEPS=libasound2, libpulse0, libpipewire-0.3-0" >> $GITHUB_ENV
-              ;;
             *)
               echo "Unsupported distro: $DISTRO"
               exit 1
@@ -101,7 +84,6 @@ jobs:
 
       - name: Map emulator to repo name
         id: repo
-        if: steps.check.outputs.skip != 'true'
         run: |
           case "$EMU" in
             geargrafx)  REPO_NAME="Geargrafx" ;;
@@ -116,7 +98,6 @@ jobs:
           echo "repo_name=$REPO_NAME" >> $GITHUB_OUTPUT
 
       - name: Install build tools
-        if: steps.check.outputs.skip != 'true'
         run: |
           apt-get update
           apt-get install -y software-properties-common
@@ -140,7 +121,6 @@ jobs:
           fi
 
       - name: Build and install SDL3 packages
-        if: steps.check.outputs.skip != 'true'
         run: |
           set -euo pipefail
 
@@ -242,7 +222,6 @@ jobs:
           rm -rf /tmp/SDL3
 
       - name: Verify SDL3 availability
-        if: steps.check.outputs.skip != 'true'
         run: |
           set -euo pipefail
 
@@ -251,18 +230,15 @@ jobs:
           dpkg-query -W -f='${Package} ${Version}\n' libsdl3-0 libsdl3-dev
 
       - name: Checkout emulator source
-        if: steps.check.outputs.skip != 'true'
         uses: actions/checkout@v6
         with:
           repository: drhelius/${{ steps.repo.outputs.repo_name }}
           ref: ${{ steps.resolve.outputs.version }}
 
       - name: Trust checkout directory
-        if: steps.check.outputs.skip != 'true'
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       - name: Prepare debian packaging
-        if: steps.check.outputs.skip != 'true'
         run: |
           cp -r platforms/linux/debian .
 
@@ -277,11 +253,9 @@ jobs:
           sed -i 's/^          //' debian/changelog
 
       - name: Build .deb package
-        if: steps.check.outputs.skip != 'true'
         run: debuild -d -us -uc -b
 
       - name: Validate package dependencies
-        if: steps.check.outputs.skip != 'true'
         run: |
           set -euo pipefail
 
@@ -291,7 +265,6 @@ jobs:
           echo "$DEPENDS" | grep -q 'libsdl3-0'
 
       - name: Collect .deb files
-        if: steps.check.outputs.skip != 'true'
         run: |
           mkdir -p /tmp/debs
           cp ../*.deb /tmp/debs/
@@ -300,7 +273,6 @@ jobs:
           fi
 
       - name: Upload .deb artifact
-        if: steps.check.outputs.skip != 'true'
         uses: actions/upload-artifact@v7
         with:
           name: ${{ steps.resolve.outputs.emu }}-${{ steps.resolve.outputs.version }}-${{ steps.resolve.outputs.distro }}-${{ matrix.arch }}
@@ -308,7 +280,6 @@ jobs:
 
   publish:
     needs: build
-    if: ${{ !cancelled() && needs.build.result != 'failure' }}
     runs-on: ubuntu-latest
     concurrency:
       group: ppa-publish
