@@ -71,16 +71,16 @@ Description: Atari Lynx emulator
  written in C++.
 
 Package: gearsystem
-Version: 3.9.19-1~ppa1~noble1
+Version: 3.9.20-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3753
+Installed-Size: 3778
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/gearsystem/gearsystem_3.9.19-1~ppa1~noble1_amd64.deb
-Size: 1310634
-MD5sum: 4c4be8631cfae4e6b9bb279625f90e9f
-SHA1: 7b2f43cc9667414157c175d05c311058d8f5b13f
-SHA256: 92514a8138f1c054d7f2f7d839c7414280aa61b34416fe374f464e5d216d684d
+Filename: pool/noble/main/gearsystem/gearsystem_3.9.20-1~ppa1~noble1_amd64.deb
+Size: 1319432
+MD5sum: 325f78ac4bbfd2de5a3e0b1c6ad38d76
+SHA1: 8720e18eaf2ea39ee75cc9de6110187ab5b19ae0
+SHA256: f2967ff73f788dc5db326b66dd4de98c20532f5628620aaf593925ccbe603d03
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearsystem
@@ -94,10 +94,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181232
-MD5sum: 1057c2341fc129caae363884e0dd0599
-SHA1: 639fdfd7a82a0336f23875ed88ae0556046603b4
-SHA256: 01e0e95afa7e6db791eec517b25d48fd500327a2d28f2c3011cf5c84ceaabc2a
+Size: 5181214
+MD5sum: 086a02f2d0d7b03affa99734df5913a2
+SHA1: f322991bea4a5ed23cba659bb776fd1791244fe2
+SHA256: d44f10e2f6313ee7eaae782a6bcd387c4442224f03e427769a33469ec8e36cb4
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +110,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445072
-MD5sum: 5a7a3dfc16b897fa37dcaa792e3f0197
-SHA1: decf57123513b5d1a3979dacf335162a754bac5c
-SHA256: ae3ff4e0f061a2650d5237a97ca3290c4d841f5bd1fe7bdad066c7fd960a69c5
+Size: 445100
+MD5sum: 4b1a2c2b92625dfaf402bafcb5b261ea
+SHA1: 5b9ca6a03bd910abe188a0d0ac3f7167bcb7f692
+SHA256: 842155c8b3f20cd88274b061636edfd547fbc40beb398ebdc1712c2bd850ae55
 Section: libdevel
 Priority: optional
 Multi-Arch: same
