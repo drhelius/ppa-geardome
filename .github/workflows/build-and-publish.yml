@@ -281,9 +281,6 @@ jobs:
   publish:
     needs: build
     runs-on: ubuntu-latest
-    concurrency:
-      group: ppa-publish
-      cancel-in-progress: false
     permissions:
       contents: write
       pages: write
@@ -302,7 +299,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           pattern: ${{ env.EMU }}-${{ env.VERSION }}-${{ env.DISTRO }}-*
-          path: incoming/
+          path: ${{ runner.temp }}/incoming/
           merge-multiple: true
 
       - name: Import GPG key
@@ -317,61 +314,67 @@ jobs:
 
       - name: Clean stale incoming files
         run: |
-          find incoming/ -name '*.deb' ! -name "${EMU}_*" ! -name 'libsdl3-*.deb' -delete 2>/dev/null || true
+          find "${RUNNER_TEMP}/incoming/" -name '*.deb' ! -name "${EMU}_*" ! -name 'libsdl3-*.deb' -delete 2>/dev/null || true
 
-      - name: Update APT repository
+      - name: Update and publish APT repository
         run: |
-          EMU_POOL="pool/${DISTRO}/main/${EMU}"
-
-          # Remove old .deb for this emulator (keep only latest)
-          mkdir -p "${EMU_POOL}"
-          rm -f "${EMU_POOL}"/${EMU}_*.deb
-          cp incoming/${EMU}_*.deb "${EMU_POOL}/"
-
-          if compgen -G "incoming/libsdl3-*.deb" > /dev/null; then
-            SDL_POOL="pool/${DISTRO}/main/libsdl3"
-            mkdir -p "${SDL_POOL}"
-            rm -f "${SDL_POOL}"/libsdl3-*.deb
-            cp incoming/libsdl3-*.deb "${SDL_POOL}/"
-          fi
-
-          # Generate Packages index for each architecture
-          for ARCH in amd64 arm64; do
-            DIST_DIR="dists/${DISTRO}/main/binary-${ARCH}"
-            mkdir -p "${DIST_DIR}"
-            dpkg-scanpackages --arch "${ARCH}" "pool/${DISTRO}/" > "${DIST_DIR}/Packages"
-            gzip -k -f "${DIST_DIR}/Packages"
-          done
-
-          # Generate Release file
-          cd "dists/${DISTRO}"
-          apt-ftparchive release . > Release
-
-          # Sign Release (remove old signatures first)
-          rm -f Release.gpg InRelease
-          gpg --batch --pinentry-mode loopback --default-key "${GPG_KEY_ID}" -abs -o Release.gpg Release
-          gpg --batch --pinentry-mode loopback --default-key "${GPG_KEY_ID}" --clearsign -o InRelease Release
-          cd ../..
-
-      - name: Export public key
-        run: |
-          gpg --armor --export "${GPG_KEY_ID}" > geardome-ppa.asc
-          gpg --export "${GPG_KEY_ID}" > geardome-ppa.gpg
-
-      - name: Commit and push
-        run: |
-          rm -rf incoming/
+          INCOMING="${RUNNER_TEMP}/incoming"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No repository changes to publish"
-            exit 0
-          fi
-          git commit -m "Update ${EMU} ${VERSION} for ${DISTRO}"
-          for i in 1 2 3 4 5; do
-            git push && break
-            echo "Push failed (attempt $i), rebasing and retrying..."
-            git pull --rebase
-            sleep $((i * 2))
+
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            git fetch origin gh-pages
+            git reset --hard FETCH_HEAD
+            git clean -fd
+
+            EMU_POOL="pool/${DISTRO}/main/${EMU}"
+
+            # Remove old .deb for this emulator (keep only latest)
+            mkdir -p "${EMU_POOL}"
+            rm -f "${EMU_POOL}"/${EMU}_*.deb
+            cp "${INCOMING}"/${EMU}_*.deb "${EMU_POOL}/"
+
+            if compgen -G "${INCOMING}/libsdl3-*.deb" > /dev/null; then
+              SDL_POOL="pool/${DISTRO}/main/libsdl3"
+              mkdir -p "${SDL_POOL}"
+              rm -f "${SDL_POOL}"/libsdl3-*.deb
+              cp "${INCOMING}"/libsdl3-*.deb "${SDL_POOL}/"
+            fi
+
+            # Generate Packages index for each architecture
+            for ARCH in amd64 arm64; do
+              DIST_DIR="dists/${DISTRO}/main/binary-${ARCH}"
+              mkdir -p "${DIST_DIR}"
+              dpkg-scanpackages --arch "${ARCH}" "pool/${DISTRO}/" > "${DIST_DIR}/Packages"
+              gzip -k -f "${DIST_DIR}/Packages"
+            done
+
+            # Generate Release file
+            cd "dists/${DISTRO}"
+            apt-ftparchive release . > Release
+
+            # Sign Release (remove old signatures first)
+            rm -f Release.gpg InRelease
+            gpg --batch --pinentry-mode loopback --default-key "${GPG_KEY_ID}" -abs -o Release.gpg Release
+            gpg --batch --pinentry-mode loopback --default-key "${GPG_KEY_ID}" --clearsign -o InRelease Release
+            cd ../..
+
+            gpg --armor --export "${GPG_KEY_ID}" > geardome-ppa.asc
+            gpg --export "${GPG_KEY_ID}" > geardome-ppa.gpg
+
+            git add -A
+            if git diff --cached --quiet; then
+              echo "No repository changes to publish"
+              exit 0
+            fi
+            git commit -m "Update ${EMU} ${VERSION} for ${DISTRO}"
+
+            if git push origin HEAD:gh-pages; then
+              exit 0
+            fi
+            echo "Push failed (attempt $i), regenerating repository and retrying..."
+            sleep $((RANDOM % 10 + i * 3))
           done
+
+          echo "Failed to publish APT repository after 10 attempts"
+          exit 1
