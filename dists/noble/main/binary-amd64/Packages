@@ -88,16 +88,33 @@ Description: Sega Master System / Game Gear / SG-1000 emulator
  Gearsystem is a very accurate, cross-platform Sega Master System /
  Game Gear / SG-1000 emulator written in C++.
 
+Package: geartowns
+Version: 0.0.1-1~ppa1~noble1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 5986
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.4), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
+Filename: pool/noble/main/geartowns/geartowns_0.0.1-1~ppa1~noble1_amd64.deb
+Size: 2389514
+MD5sum: fddb524cb785af34da3b0443bc819cfc
+SHA1: 55d488c54d3729160fb5ee7f2c46b48949960fd1
+SHA256: 78c2a8665d05ed75e4b0c9916df7697043d63b1cde2760d215e6299784eec2fb
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Geartowns
+Description: FM Towns emulator
+ Geartowns is a cross-platform emulator for Fujitsu FM Towns software.
+
 Package: libsdl3-0
 Version: 3.4.10-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181054
-MD5sum: 283b1e94031af0f0fece4ac63c0c7889
-SHA1: bc7c7e1cc9f24c355fd186c76aa133151923cd5c
-SHA256: 88f603768f360023ce720b94f4c455a9a1822897fa3e3046e192a359778bad9c
+Size: 5181016
+MD5sum: b1f63eeaef1ddab48fc9597266846cb5
+SHA1: 5344a4809bfe233b931e9c01ffa3bf2f723d4828
+SHA256: 8e4e2cc2bec972c7209061aba3a7056cb309a549a4bf24eb7dcae911e8cba24e
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -110,10 +127,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445106
-MD5sum: 90a62f0d6896863644a6ac7b8d783904
-SHA1: 81e1232cf080b4c0a3c4e146ffab668122d0b731
-SHA256: 130b74926d8e0e0733a4bf2ecf42d8b9c5e7d060429ce239f7d75f89c4e62640
+Size: 445178
+MD5sum: 9b9e61f9e2b172eca44004df60819166
+SHA1: 437c9428ecadf731b84ed5c6a6644f592d015d04
+SHA256: 639d6a56fdcb9683265b332e6fabaabe64f2f136ba20bbfcf48bc5bfab452b0e
 Section: libdevel
 Priority: optional
 Multi-Arch: same
