@@ -88,3 +88,20 @@ Description: Sega Master System / Game Gear / SG-1000 emulator
  Gearsystem is a very accurate, cross-platform Sega Master System /
  Game Gear / SG-1000 emulator written in C++.
 
+Package: geartowns
+Version: 0.0.1-1~ppa1~resolute1
+Architecture: arm64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 5367
+Depends: libc6 (>= 2.43), libgcc-s1 (>= 3.0), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
+Filename: pool/resolute/main/geartowns/geartowns_0.0.1-1~ppa1~resolute1_arm64.deb
+Size: 2281046
+MD5sum: 7bb322ba4c2bcf0f121fa979409b23c0
+SHA1: 2d28db93659da11c0f4973641155191df6f5818a
+SHA256: 9475c7fcad4725f02efe04d6753d64f4880058ed76a760edaa4f946c6ec86d76
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Geartowns
+Description: FM Towns emulator
+ Geartowns is a cross-platform emulator for Fujitsu FM Towns software.
+
