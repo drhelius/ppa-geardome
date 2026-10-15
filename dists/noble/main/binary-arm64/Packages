@@ -89,16 +89,16 @@ Description: Sega Master System / Game Gear / SG-1000 emulator
  Game Gear / SG-1000 emulator written in C++.
 
 Package: geartowns
-Version: 0.0.4-1~ppa1~noble1
+Version: 0.0.5-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 7350
+Installed-Size: 7414
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geartowns/geartowns_0.0.4-1~ppa1~noble1_arm64.deb
-Size: 3588380
-MD5sum: e9165c60ad4d0f09a26a5058e84f95ea
-SHA1: f2bf754d40a13c7a7cbd47d095541fa36cbb1aae
-SHA256: d8fc8a8909a09f088a37809692919aa82050169c15a6a3c33cca3762990ad3ae
+Filename: pool/noble/main/geartowns/geartowns_0.0.5-1~ppa1~noble1_arm64.deb
+Size: 3667448
+MD5sum: 04694921e9f09403e6bdb9175e076f17
+SHA1: bde78992d6dc698e23288d59b93cb297a17c74fb
+SHA256: 1df3c2b18867b092f6eafbde9100a160f34f1af8b710397c3f8ff85c0046b90d
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geartowns
@@ -111,10 +111,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824872
-MD5sum: 866eae0c9f158f9a802665c44355cc93
-SHA1: 5f920b1374e3e68d26e341d06627c1a5d11ec7b7
-SHA256: 872004c1856015268b73c5013cf720fb64726499892bf51d7897b680270bc7ef
+Size: 4825384
+MD5sum: c51375ba8a0fcac400727e0cd37c28b7
+SHA1: b9e8fd4b3907b53d231eeaffd17839ff9e4fec8d
+SHA256: 0ecf94abfcee9f6a8aa5e896f4c8eaa2cbdaad79701fb526abc0aabd692cbb91
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445192
-MD5sum: 78b66e96b8fcc80f0add0fc5558b7017
-SHA1: 00046dd889481d6d1cba4e85f5a4b90be240185e
-SHA256: 9446f3525d4061f6921634b1c911a1c3d629a2e4abe252b408977df0d170d977
+Size: 445322
+MD5sum: f406c537e13bbba41f530cc7501b4526
+SHA1: 1f715fc237ec78349bf77112387b4b7084837114
+SHA256: 922ee7871133e7c843d29720c77a7a861087663bdbc27eeb67d42b2177f05cdf
 Section: libdevel
 Priority: optional
 Multi-Arch: same
