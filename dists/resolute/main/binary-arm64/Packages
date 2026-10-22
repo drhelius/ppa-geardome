@@ -89,16 +89,16 @@ Description: Sega Master System / Game Gear / SG-1000 emulator
  Game Gear / SG-1000 emulator written in C++.
 
 Package: geartowns
-Version: 0.0.8-1~ppa1~resolute1
+Version: 0.0.9-1~ppa1~resolute1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 7741
+Installed-Size: 7877
 Depends: libc6 (>= 2.43), libgcc-s1 (>= 3.0), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
-Filename: pool/resolute/main/geartowns/geartowns_0.0.8-1~ppa1~resolute1_arm64.deb
-Size: 3789240
-MD5sum: 545bb5d137376edc33a8bdd8f8d3b156
-SHA1: 4f38dabd6097e3708e7c05705f2654193379bb5f
-SHA256: ecc0968814e39a0568943b11f44b58b9f75b8d77c905978891aa7cc8a95cf013
+Filename: pool/resolute/main/geartowns/geartowns_0.0.9-1~ppa1~resolute1_arm64.deb
+Size: 3837110
+MD5sum: 9664650e132f884de3d51165943e5e94
+SHA1: 1f9d56b6acf062deced2c1aa4f6c76246a074432
+SHA256: f92de25b713c10a689e1727bf39575546b8c8650f429bd3422c9a2f2eb9d6981
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geartowns
