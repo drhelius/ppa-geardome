@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.8.4-1~ppa1~noble1
+Version: 1.8.5-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 5716
+Installed-Size: 5780
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.8.4-1~ppa1~noble1_arm64.deb
-Size: 2103696
-MD5sum: e0662a78454a5a5fba9c1269d94f1fee
-SHA1: 9be3e70d5f9953d01b555bcf3c5a29e8fc064eb4
-SHA256: b185e7b5eeabdac4731d1fe7374bf2324d46f12a30bd789bd88c60a046237fbc
+Filename: pool/noble/main/geargrafx/geargrafx_1.8.5-1~ppa1~noble1_arm64.deb
+Size: 2121920
+MD5sum: 56f8ae066203016089a8a7812f4b0748
+SHA1: c10a3e65c2e1f1e8a4712ef56d016d5d8592ee21
+SHA256: 57eef30303d5709860f791ce3e668615bd9cbf4e5bc3abb70020669f003c8331
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -111,10 +111,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824764
-MD5sum: 5d95434c05d4206c74f740ccc9fbdcca
-SHA1: 36a2dc6d6862c4b2f74bfa278856f35a60998dd6
-SHA256: 0a063ed295c3a4938594f3e7483d4717e8b53ad8a6ef35bb3514737589a259d1
+Size: 4824730
+MD5sum: 11636b384d68cd8b71fc946adc36aae1
+SHA1: 3e04c37c2993f1c764f5632b7045eb8be3da806e
+SHA256: 7c917f5dfea18198a380fdd33bf62598e7e8d45f3b5691de699dd1692019fcde
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445120
-MD5sum: 9f3dda0b7ebeb8031785748a5af2438b
-SHA1: c4c62f8bfa252fd947c9815f5381d28d85920c94
-SHA256: 4be6d5416b99468983528d4c53c47a203917e8719ace91c9a07275cbc24fa708
+Size: 445152
+MD5sum: 7b08bac7b918d536c2448ac0784bdb8c
+SHA1: 6ccc72385693a9d3b6a5a8fecb6bae35ed4ac377
+SHA256: 286bd22d7b7314c3ea6456a3e249109b91dbd09cfe6eaf1409a295cacdddcb85
 Section: libdevel
 Priority: optional
 Multi-Arch: same

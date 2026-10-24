@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.8.4-1~ppa1~noble1
+Version: 1.8.5-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 6599
+Installed-Size: 6659
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.8.4-1~ppa1~noble1_amd64.deb
-Size: 2218502
-MD5sum: 95d8cf021e451664fb82227d175dac87
-SHA1: a499f7f07c64927b3269ca001acc069fa568cba0
-SHA256: 45c1dd1d2844d81cdf14c14c7e39dfe8467267045a66d64c92d0f2bf06b8d6a6
+Filename: pool/noble/main/geargrafx/geargrafx_1.8.5-1~ppa1~noble1_amd64.deb
+Size: 2241278
+MD5sum: fb04ff3debffd1080d32e23dcb13d54d
+SHA1: 3766c553928b59383d65ff7e151d8bfaea38bcb5
+SHA256: 212f23749b653dcf6aa7ca6ee7f331c32f633f713beae6d0a896ca396929862c
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -111,10 +111,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181234
-MD5sum: 77c93a8626fa6ad6b60dd59e9047ee5a
-SHA1: 1ad6313da0094db328baddcf2df42e272d556419
-SHA256: f1f282c3236e48ccb4cab3eb89317d2e924e6f4a0672b9b97626f164036b3d66
+Size: 5181064
+MD5sum: bffa849d8aa4b503d1a8c9dcac1de8f8
+SHA1: 510426db7921d4d153dfa1e7074d8eaf94581a2c
+SHA256: 934325787798a2141b9b6805bfecdd712eaae6565ee45f2a52f4ac036e9b5148
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445110
-MD5sum: 6230df5b0db10404c0664c13a4e787fe
-SHA1: a0c97d7a16ceb165da515b636d170d1f9fc1cbe0
-SHA256: 8d805ab40015e062be9c6df76c586a1f91e3e3570d1071c499a13053cef15975
+Size: 445090
+MD5sum: 477d0e85c81f1229bd02015a85af1e5c
+SHA1: 902b47e35b20c1aecd7b2b88288329111b6a95c3
+SHA256: 69d1f3c95078266033537f242bd71702d7de7eb5ba0c8134c50e385d5de45aaf
 Section: libdevel
 Priority: optional
 Multi-Arch: same
