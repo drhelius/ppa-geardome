@@ -1,14 +1,14 @@
 Package: gearboy
-Version: 3.8.19-1~ppa1~noble1
+Version: 3.8.20-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 3827
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/gearboy/gearboy_3.8.19-1~ppa1~noble1_arm64.deb
-Size: 1708436
-MD5sum: 8db28cca5764acacddcf7e4068b776c6
-SHA1: 49586abaa85ec79fa923608299fa984a71b91aa1
-SHA256: bdbb6c7eed35c157d1f8332735f8d0e1dd0e129615939cd6844cf36b39378919
+Filename: pool/noble/main/gearboy/gearboy_3.8.20-1~ppa1~noble1_arm64.deb
+Size: 1710576
+MD5sum: 952b878378ae19e656c4a4fa4764dd08
+SHA1: 036f3891930e7c247a4bf799485411f17eb44237
+SHA256: 720c419d402be788f2f1887f2376fafa892770b69a7c19fc8d2e4e67e356d935
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearboy
@@ -111,10 +111,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824724
-MD5sum: 568e5d1e49e25277cf0f30af06dfc522
-SHA1: 739eafd527fdc57f125bb01b53296f51c504a7e7
-SHA256: 4e8ebc9c7af84b818a281b21663e71b99291cc67c88bdba731788e7a72ef9d81
+Size: 4824762
+MD5sum: d5d259b10c3e6ba064d34ea8fff89beb
+SHA1: 5c49a4691b907c57c08898e98c85e7b36ff4557d
+SHA256: d2947f8e6af0b71a1ed8a1f3ef9da9dcb94c2fbbe98c561e96d1d7999c6cf7fd
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445080
-MD5sum: 9d619d6a718dcac52e277d8f780c86b2
-SHA1: f6838600d7be76d96bca033d8bc27e8fb3916aba
-SHA256: 0dc26f26429866dcdb4da47537890df4f692fa47302ac0ab30d964878328753c
+Size: 445114
+MD5sum: f7af38b2472181075ede85d49cda12b9
+SHA1: ffcd4905562f220ef5d4c1dc7f8dbd33188077fa
+SHA256: ce7eb3c878d5986e429d976ff34aa38f5a8812f2c3bda3cb9f1756abc5de89b7
 Section: libdevel
 Priority: optional
 Multi-Arch: same
