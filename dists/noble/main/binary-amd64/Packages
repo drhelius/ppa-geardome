@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.8.5-1~ppa1~noble1
+Version: 1.8.6-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 6659
+Installed-Size: 6791
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.8.5-1~ppa1~noble1_amd64.deb
-Size: 2241278
-MD5sum: fb04ff3debffd1080d32e23dcb13d54d
-SHA1: 3766c553928b59383d65ff7e151d8bfaea38bcb5
-SHA256: 212f23749b653dcf6aa7ca6ee7f331c32f633f713beae6d0a896ca396929862c
+Filename: pool/noble/main/geargrafx/geargrafx_1.8.6-1~ppa1~noble1_amd64.deb
+Size: 2268882
+MD5sum: edba9efd6411a14e8492229ecdaff2b9
+SHA1: 436f49c8ac0a384e2131248ba8d0327fb00d7498
+SHA256: 233273c4da050643d124b95316b07a835fa6605b2024b9ae5c78b83d07e0b57c
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -111,10 +111,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181212
-MD5sum: fecc80ca02e4a294929c8ed8d23cb584
-SHA1: 475c946a92caeb9164fd56f4a7c58dfd622197b4
-SHA256: 5f02013a52248ab5742430f26ba626be71754060bff9a067194b8c123807326e
+Size: 5181232
+MD5sum: 61804ac9b4c52906949e9c6909a5a202
+SHA1: a7239b89e5cd8c1388eedcae317824bcca5371a6
+SHA256: fb8110222d35fea107048de4a29ac26fca4649fe9349490d7edc5da2b2339110
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445106
-MD5sum: 1dbc366aeb737a67a4b06c99aff292ca
-SHA1: 161fdd5d90e78a4949c0dcbe05b0a6f22128d315
-SHA256: f43ab05bc3dda43a4dcf4c88f2e58e858d1d3eb62bf151a87c29d99cdaa1a231
+Size: 445122
+MD5sum: 58a00e54f1e882f862ee7a301c7f2c3d
+SHA1: 0fd9f827df1259dcf1761a493c8e53caa511a801
+SHA256: f6f514700d80709fcc953b780da7df0b1289e01c56a28bc505c00fbfdb32c38d
 Section: libdevel
 Priority: optional
 Multi-Arch: same
