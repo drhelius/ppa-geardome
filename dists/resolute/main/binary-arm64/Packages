@@ -53,16 +53,16 @@ Description: PC Engine / TurboGrafx-16 / SuperGrafx / CD-ROM² emulator
  SuperGrafx and CD-ROM² software.
 
 Package: gearlynx
-Version: 1.2.36-1~ppa1~resolute1
+Version: 1.2.37-1~ppa1~resolute1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Installed-Size: 4838
 Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
-Filename: pool/resolute/main/gearlynx/gearlynx_1.2.36-1~ppa1~resolute1_arm64.deb
-Size: 2029518
-MD5sum: 49db029aa913330d1612079d418f3356
-SHA1: 1785c72bfc687bf896f69d3f0f0eaa0e6e011646
-SHA256: 2736fa3feece37a6cf29503c0ab28200d6d554912c8f92addda673a3faf8bce9
+Filename: pool/resolute/main/gearlynx/gearlynx_1.2.37-1~ppa1~resolute1_arm64.deb
+Size: 2032142
+MD5sum: 7b59617ae85d2eb69c414657fe6a0039
+SHA1: 9ffac22e9d6b9e90847b4b71c6daa884fe5dea6b
+SHA256: 02e19ab6f807ac875d04aeeb0327f260cf99ef9070077e082b218f57d760dfe2
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearlynx
