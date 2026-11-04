@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.8.6-1~ppa1~noble1
+Version: 1.8.7-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 6791
+Installed-Size: 7061
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.8.6-1~ppa1~noble1_amd64.deb
-Size: 2268882
-MD5sum: edba9efd6411a14e8492229ecdaff2b9
-SHA1: 436f49c8ac0a384e2131248ba8d0327fb00d7498
-SHA256: 233273c4da050643d124b95316b07a835fa6605b2024b9ae5c78b83d07e0b57c
+Filename: pool/noble/main/geargrafx/geargrafx_1.8.7-1~ppa1~noble1_amd64.deb
+Size: 2311368
+MD5sum: e18c64d7f4fe55735406841f58f2b91c
+SHA1: a8adb5373cec94dae419ca90b7f38d36ebadbec4
+SHA256: ffaa6e4511ee3626daca3f38f66997532beb6056a5bbb20c351a2503bacc52b1
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -111,10 +111,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181072
-MD5sum: b4d2db5d7eb710887b44540ae0318871
-SHA1: 81c238b0582c12e5aea8be7ef0e41a139e8bb20f
-SHA256: 663962098fbc0ac167891e0f9a4c2eddc35a8aa75678088049365bb5022ca026
+Size: 5181028
+MD5sum: 1748b021ea7a508cc39f6ff83ce58b20
+SHA1: 350964c364025387119a36e6795b17219489cc4c
+SHA256: 58ea2e29c1d2619db0a3fd8ac7c957edaa5b0bb94dda8d028159b4d9477bee2b
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445150
-MD5sum: 0880c27461d34dcd752da6970d45685f
-SHA1: 83777695dff5f1727df52d125175b782f40ef327
-SHA256: 82d9cd01e47dadb29bf7cd01ff101d171a545d6293fe3fd2a5026d88f6fe1f25
+Size: 445344
+MD5sum: c50497a40acaad35155803cf9a746fca
+SHA1: b22a2cc828f93f3679b6ff37f1ae9ee50d025de7
+SHA256: ce481d506a79cbfa1379e68d95b24cf294eb55fc015073f70fba25bcecc1a75c
 Section: libdevel
 Priority: optional
 Multi-Arch: same
