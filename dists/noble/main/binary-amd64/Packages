@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.8.7-1~ppa1~noble1
+Version: 1.8.8-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 7061
+Installed-Size: 7097
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.8.7-1~ppa1~noble1_amd64.deb
-Size: 2311368
-MD5sum: e18c64d7f4fe55735406841f58f2b91c
-SHA1: a8adb5373cec94dae419ca90b7f38d36ebadbec4
-SHA256: ffaa6e4511ee3626daca3f38f66997532beb6056a5bbb20c351a2503bacc52b1
+Filename: pool/noble/main/geargrafx/geargrafx_1.8.8-1~ppa1~noble1_amd64.deb
+Size: 2327884
+MD5sum: 862880e8ec2f5bc216aae597f44fb65e
+SHA1: 8fefcec6acb4f348a6c8b76b2d3d62e5342b8128
+SHA256: 8b40acb0701818f6a79d491cc4582efcb2d8a0281c55a48638c6ed5c62848ef3
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -111,10 +111,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181060
-MD5sum: 4a7d0d4151b7b8ca1bc502efdef33502
-SHA1: 5e7b7b4d1111c5fa1d27d1734e9b8db1fbfb32dc
-SHA256: 43f3b80a8c97fbe9539a39cd389e02f54ad0e168102d4a9c0c25612eaffbf70f
+Size: 5181288
+MD5sum: be227f14d09a1378c26f6a11e5479e03
+SHA1: a688e39c5d88e64b77fe796065e0be7aa64498bf
+SHA256: 2bd30d03f42875b9447f45d85d1535a9908e4c636d2bacbd97dd234c3080098c
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445156
-MD5sum: f832c6a31f73ad906a40c6458e6bfab1
-SHA1: b6c37199077f75c284bf48b06354411d9ab56601
-SHA256: acb17d6ce9781a367f370c9b8e2c57b9765b8f99d203ddd8973f5a78ac3b32b4
+Size: 445176
+MD5sum: a36b6bf64dcaa8d96656fcccdde22cbc
+SHA1: c2c98f6353f540c1e8438be7f0af04efa8a1591d
+SHA256: d48f734a27bc6c3bfa94306f86b3fa121f4c017536849087d2432e1d6da2f1dc
 Section: libdevel
 Priority: optional
 Multi-Arch: same
