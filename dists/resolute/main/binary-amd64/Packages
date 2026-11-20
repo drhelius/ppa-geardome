@@ -1,14 +1,14 @@
 Package: gearboy
-Version: 3.8.21-1~ppa1~resolute1
+Version: 3.8.22-1~ppa1~resolute1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 3969
+Installed-Size: 3995
 Depends: libc6 (>= 2.43), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
-Filename: pool/resolute/main/gearboy/gearboy_3.8.21-1~ppa1~resolute1_amd64.deb
-Size: 1738640
-MD5sum: 69296abbcf384b8519cfedf1afebeaa1
-SHA1: fac79427633486f4060e2f0cdeaeee401ee320cb
-SHA256: 4875551f7a7c85c588f874ac1dcc9d1637a4e67655b32bc9d63a81205f1a54f9
+Filename: pool/resolute/main/gearboy/gearboy_3.8.22-1~ppa1~resolute1_amd64.deb
+Size: 1753984
+MD5sum: 682a9ef21cadf5978134cb079ee32581
+SHA1: c09870a8dc24d47a63d0188fe0460d07c518e4fb
+SHA256: f6ea475d79f77a1777ecd760ded3906dd446891539342546d04692f82bfb11d7
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearboy
