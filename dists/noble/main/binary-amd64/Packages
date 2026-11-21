@@ -17,16 +17,16 @@ Description: Game Boy / Game Boy Color emulator
  written in C++.
 
 Package: gearcoleco
-Version: 1.8.0-1~ppa1~noble1
+Version: 1.8.1-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 5008
+Installed-Size: 5049
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/gearcoleco/gearcoleco_1.8.0-1~ppa1~noble1_amd64.deb
-Size: 1967462
-MD5sum: d3830b0dedb39a6766e79eaed301b98d
-SHA1: e8eec316d90d942a2514030ac4d014cfc45e5c40
-SHA256: ba09b8d88e065100559beb7d193cf7bbcd47314b6f209d64879311c26c28ae08
+Filename: pool/noble/main/gearcoleco/gearcoleco_1.8.1-1~ppa1~noble1_amd64.deb
+Size: 1985042
+MD5sum: 2d4b9bb8ffd2819fe764e90cf7f16b65
+SHA1: 0354ec85c433d9f7c9c899c59e45a8276cced754
+SHA256: 118237afbfe2bbe85cf897365eaffbb5d76e77eacf55b7711a60163c124a8e11
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Gearcoleco
@@ -111,10 +111,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181028
-MD5sum: cdff02aca0308d38b288c415502834f1
-SHA1: 3ca39423e7ce100639fe3427d647be909f1c2f24
-SHA256: 8e32add86036a6be3f4a51f9bd89ec5a035606743ec6b7fbe2f0c952e07fd826
+Size: 5181254
+MD5sum: ec0d42fd5da5126d0bccf4472e326de5
+SHA1: b1c15975e0985b136e0f31f4c3c677f08f8a68bd
+SHA256: d95de62bda353509d9dd1d17bbc67eab18050bc68418d6cd7d5ac5a42ee03568
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445250
-MD5sum: aaa1dcfd3f5980f9bc2c349c8279718a
-SHA1: dbd5b1a575fe422d0ef1d5a6964cf86ac75c38bc
-SHA256: 412bd776695fe236034085f021e8c1bbd54f6e745bc1a7369bd67c01d4f50a82
+Size: 445116
+MD5sum: d251a03ce991505d91684d89ab1158d2
+SHA1: b21e74c033549006b3133213ead46a8abbf183eb
+SHA256: 5cb35d603d11784dc1550c74f53cc3147c9c1c0b2dc785e57e10472babe1b810
 Section: libdevel
 Priority: optional
 Multi-Arch: same
