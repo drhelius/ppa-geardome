@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.8.8-1~ppa1~noble1
+Version: 1.8.9-1~ppa1~noble1
 Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 7097
+Installed-Size: 7106
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.8.8-1~ppa1~noble1_amd64.deb
-Size: 2327884
-MD5sum: 862880e8ec2f5bc216aae597f44fb65e
-SHA1: 8fefcec6acb4f348a6c8b76b2d3d62e5342b8128
-SHA256: 8b40acb0701818f6a79d491cc4582efcb2d8a0281c55a48638c6ed5c62848ef3
+Filename: pool/noble/main/geargrafx/geargrafx_1.8.9-1~ppa1~noble1_amd64.deb
+Size: 2329114
+MD5sum: c823dbb3a98787504261b9451e150888
+SHA1: 5e372f2e82d2e055b7d8fc70b384a59e0b97a461
+SHA256: 644e8fa6038f5e623e60b52039adf97b19f1aa6a8d398b5dbef4e491a0d68bea
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -111,10 +111,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181254
-MD5sum: ec0d42fd5da5126d0bccf4472e326de5
-SHA1: b1c15975e0985b136e0f31f4c3c677f08f8a68bd
-SHA256: d95de62bda353509d9dd1d17bbc67eab18050bc68418d6cd7d5ac5a42ee03568
+Size: 5181012
+MD5sum: 7daa3d84b0a02fca07c9b9ba2ce72483
+SHA1: 0cb62b34bf250057f7fffc17c9931276d2f549bf
+SHA256: 685816ea03b5abdd765845858d02fc51bf98625d82599bc993ba005568fd8609
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445116
-MD5sum: d251a03ce991505d91684d89ab1158d2
-SHA1: b21e74c033549006b3133213ead46a8abbf183eb
-SHA256: 5cb35d603d11784dc1550c74f53cc3147c9c1c0b2dc785e57e10472babe1b810
+Size: 445128
+MD5sum: 72282a3dc44e5d3451259436a9881aca
+SHA1: c7c55c00eea8a4fcbad52b5157b9e2967a7d1aac
+SHA256: 6fcb9fcc98b2e0c4e877ee597d4794fc752e192e8e85a80e15642005ffcfce8a
 Section: libdevel
 Priority: optional
 Multi-Arch: same

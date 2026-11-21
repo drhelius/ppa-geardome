@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geargrafx
-Version: 1.8.8-1~ppa1~noble1
+Version: 1.8.9-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 6158
+Installed-Size: 6159
 Depends: libc6 (>= 2.38), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geargrafx/geargrafx_1.8.8-1~ppa1~noble1_arm64.deb
-Size: 2210534
-MD5sum: d6e77a234df5d31c6d8a11c8da9be8ca
-SHA1: af1e10f19173c28c9f54c9a891303428521a00bd
-SHA256: a65a9f4a1b090a6defda59d97c8c6e3ce1a12c5b1a4d9c296f46f8aa23f66188
+Filename: pool/noble/main/geargrafx/geargrafx_1.8.9-1~ppa1~noble1_arm64.deb
+Size: 2212448
+MD5sum: 0a7f82a98be07a54e3cd8bd0cba22c6f
+SHA1: b18db8ec43fd550ea90f4b9e4dae81e3a6c662c3
+SHA256: 22c8ef844ebef5e7e899cc772afa04f3c7df18ecd4749e9344707efc54ccb0db
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geargrafx
@@ -111,10 +111,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824734
-MD5sum: f94ca2908c427162d85000bc0fab9f7d
-SHA1: 8d9a8050221d29a1e2b716842d9453d78f5e60b8
-SHA256: c548e91e46f6a24787fe96050c2dc9ecca20fbf10108d28897cd234c61923ebc
+Size: 4824732
+MD5sum: 0b2b2d88e8047c3b0c381d0fff40f828
+SHA1: 466df7bad60409774f77a53565c04fddb29a2f97
+SHA256: 1dadb3fdcf8e7e965abb23775d3d8c6583a93dff4249e64a1d4fe9cf117f137a
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445162
-MD5sum: 341ce116519b4d387565f9d69fce2daa
-SHA1: 7e82f8b188e9f54b06c08ccd276711d2a9be3d39
-SHA256: 71037786224064a84c193286af90b53898635a3778c9bab1ab314fd7de14774d
+Size: 445074
+MD5sum: 3cba141b6b69acb291c866153b3b1f44
+SHA1: a88caaf161c5fa7d0a06af43f02f7e693b9d0086
+SHA256: 9a827c735c033e4fec1857023d4d710e302facaea016cde6ead9d07e0e03dca0
 Section: libdevel
 Priority: optional
 Multi-Arch: same
