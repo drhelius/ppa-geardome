@@ -35,16 +35,16 @@ Description: ColecoVision emulator
  written in C++.
 
 Package: geardox
-Version: 0.0.1-1~ppa1~resolute1
+Version: 0.0.2-1~ppa1~resolute1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 11055
+Installed-Size: 11248
 Depends: libasound2t64 (>= 1.0.16), libc6 (>= 2.43), libgcc-s1 (>= 3.0), libsdl3-0 (>= 3.2.0), libstdc++6 (>= 13.1)
-Filename: pool/resolute/main/geardox/geardox_0.0.1-1~ppa1~resolute1_arm64.deb
-Size: 5351826
-MD5sum: ff2077f0a4dd2cf966d62061172b760f
-SHA1: ff4fe96fd99bff17c3a44893b60b14b8ad1a9603
-SHA256: 3bf991ca59b5f48b422b113cbff160445d1fdfcd4be658c3b2b18a00c1dfa5a8
+Filename: pool/resolute/main/geardox/geardox_0.0.2-1~ppa1~resolute1_arm64.deb
+Size: 5486458
+MD5sum: 93ed2270f63cc8d965c8bb3208ac131e
+SHA1: 4ce3ff9573a928102927c2d05954b852fe4b8abf
+SHA256: 31007621ae9a4fa6c3f065faa60192dd1b6246f4fcf2d47ea8f35ec0db957cc3
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geardox
