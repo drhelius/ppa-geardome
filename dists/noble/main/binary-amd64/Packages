@@ -34,6 +34,23 @@ Description: ColecoVision emulator
  Gearcoleco is a very accurate cross-platform ColecoVision emulator
  written in C++.
 
+Package: geardox
+Version: 0.0.1-1~ppa1~noble1
+Architecture: amd64
+Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
+Installed-Size: 12015
+Depends: libasound2t64 (>= 1.0.16), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
+Filename: pool/noble/main/geardox/geardox_0.0.1-1~ppa1~noble1_amd64.deb
+Size: 5509584
+MD5sum: 54935cdff0dc98faccd441267e756d91
+SHA1: d97986238a615f37447c822334b22f3dfc8359e7
+SHA256: f2afc412907ce27610e6283a2f498f438c43808c14648c848c418a8a3349083a
+Section: games
+Priority: optional
+Homepage: https://github.com/drhelius/Geardox
+Description: MS-DOS PC/AT emulator
+ Geardox is a cross-platform emulator for MS-DOS PC software.
+
 Package: geargrafx
 Version: 1.8.9-1~ppa1~noble1
 Architecture: amd64
@@ -111,10 +128,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 5181252
-MD5sum: bad7e323926a396d711e3b43136f3fab
-SHA1: 034de69ca3414833f4bbc717c28889d6b03047ee
-SHA256: 29c931a80c7ee040d96af5229a4fccdf9eb119f885a6fa36c7b489d3dfa8a19b
+Size: 5181062
+MD5sum: dfcd06acf5f62434cd433ff091569d40
+SHA1: 4bf87223a86e4d7ac9c4d5403126dc676c02d107
+SHA256: c31842ac962d3ebc90185b560950c2cd8d30062a19e01b489c7d609111514955
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +144,10 @@ Architecture: amd64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_amd64.deb
-Size: 445138
-MD5sum: f4a3365aa9a9672d2ab681fd32616a54
-SHA1: 93e397f6b53f6eeeea7047af2a1d07c276ab0482
-SHA256: e4f7416cf279be3758bd117ff5e122e03f3fff90d1676ced11eb5b494aab4550
+Size: 445126
+MD5sum: 366ce555322a971c1cc0e86a12f8af75
+SHA1: e743604e49178f7ef56b22ec647b82443e8bab08
+SHA256: 9b723f4405d1e0cf065f052498395dad26fb6e157e9a69fe13ec42c53da49b52
 Section: libdevel
 Priority: optional
 Multi-Arch: same
