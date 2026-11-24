@@ -14,6 +14,7 @@ on:
           - gearcoleco
           - gearlynx
           - geartowns
+          - geardox
       version:
         description: 'Version (e.g., 1.7.2)'
         required: true
@@ -92,6 +93,7 @@ jobs:
             gearcoleco) REPO_NAME="Gearcoleco" ;;
             gearlynx)   REPO_NAME="Gearlynx" ;;
             geartowns)  REPO_NAME="Geartowns" ;;
+            geardox)    REPO_NAME="Geardox" ;;
             *) echo "Unknown emulator: $EMU" && exit 1 ;;
           esac
           echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
