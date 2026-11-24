@@ -89,16 +89,16 @@ Description: Sega Master System / Game Gear / SG-1000 emulator
  Game Gear / SG-1000 emulator written in C++.
 
 Package: geartowns
-Version: 1.0.10-1~ppa1~noble1
+Version: 1.0.11-1~ppa1~noble1
 Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
-Installed-Size: 8883
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
-Filename: pool/noble/main/geartowns/geartowns_1.0.10-1~ppa1~noble1_arm64.deb
-Size: 4203402
-MD5sum: 2766d64a28c08a2b8eca629f63ee5d0f
-SHA1: 3911b723edb90d425da0eedf8dd0ed6e64963ea9
-SHA256: ff404aa38ee98b7fd43878dcb29abd7544ca8916e53665057e230492afa1a57e
+Installed-Size: 9205
+Depends: libasound2t64 (>= 1.0.16), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsdl3-0 (>= 3.4.10-1~ppa1~noble1), libstdc++6 (>= 13.1)
+Filename: pool/noble/main/geartowns/geartowns_1.0.11-1~ppa1~noble1_arm64.deb
+Size: 4440062
+MD5sum: 945d76674cd05e2ea7b07044b025ef5f
+SHA1: afd8b60b348142ad77c1138206655e05384d3565
+SHA256: 532b12f66c5d4f0c7ad5e371479326a33bb526d84b218c539bffd48adc419bcd
 Section: games
 Priority: optional
 Homepage: https://github.com/drhelius/Geartowns
@@ -111,10 +111,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libc6, libasound2t64, libpulse0, libpipewire-0.3-0t64
 Filename: pool/noble/main/libsdl3/libsdl3-0_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 4824738
-MD5sum: 437b56a0847e0303abd3739e4e3839aa
-SHA1: cbae3b9f9bc1085b64f89c6b0520d5adcd65ec33
-SHA256: ecf12035d4a5f6161d285d9c54880eca8619213a7c6e6c1cac0e96a5fdff94da
+Size: 4824746
+MD5sum: 2104344d557750d77b68b88d33e58b83
+SHA1: bdcfa9f36e9c43e3ec6423888af33c660c73fecd
+SHA256: 3341fa36b31442f71a1f7f5a51cedc06078a9bad9d38e26b4986cea9b613c6fd
 Section: libs
 Priority: optional
 Multi-Arch: same
@@ -127,10 +127,10 @@ Architecture: arm64
 Maintainer: Nacho Sanchez <863613+drhelius@users.noreply.github.com>
 Depends: libsdl3-0 (= 3.4.10-1~ppa1~noble1), pkgconf
 Filename: pool/noble/main/libsdl3/libsdl3-dev_3.4.10-1~ppa1~noble1_arm64.deb
-Size: 445100
-MD5sum: af4835d06fb93b7b0d52e7a9a6fb8a07
-SHA1: 6cb10f89123539eef8327dc744e3c87b226071cf
-SHA256: 3583442aec191383aec59ba79da1de65c758929f11596cd6702e35a8da8ebb66
+Size: 445170
+MD5sum: c9a084943ee8a24bd5a150f2429a3a24
+SHA1: 338d0c7dab977d16e792906894b1816d7a3ad301
+SHA256: 68bcc0ba06c00c52a6acc0419e4339b0108f0d5189f47db2bd8e8a6936c9a1ed
 Section: libdevel
 Priority: optional
 Multi-Arch: same
